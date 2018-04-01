@@ -1,0 +1,12 @@
+c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\bin\Debug\Mercure.exe.config
+c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\bin\Debug\Mercure.exe
+c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\bin\Debug\Mercure.pdb
+c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\bin\Debug\System.Data.SQLite.dll
+c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\bin\Debug\System.Data.SQLite.xml
+c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\obj\Debug\Mercure.csprojResolveAssemblyReference.cache
+c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\obj\Debug\Mercure.Properties.Resources.resources
+c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\obj\Debug\Mercure.csproj.GenerateResource.Cache
+c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\obj\Debug\Mercure.exe
+c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\obj\Debug\Mercure.pdb
+c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\obj\Debug\Mercure.Main.resources
+c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\obj\Debug\Mercure.OpenFile.resources
