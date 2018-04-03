@@ -30,6 +30,7 @@ namespace Mercure
 
                 ReadFile rf = new ReadFile();
                 rf.LoadFile(FileNameForLoadFile);
+                rf.GetInfoArticleList();
                 Console.Read();
             }
         }
