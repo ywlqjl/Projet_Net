@@ -23,10 +23,14 @@ namespace Mercure
             openFileDialog.Filter = "XML File (*.xml) |*.xml";
             if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                //string FileName = openFileDialog.FileName;
+                string FileNameForLoadFile = openFileDialog.FileName;
                 string FileName = System.IO.Path.GetFileNameWithoutExtension(openFileDialog.FileName);
                 Txt_FilePath.Text = FileName;
                 Console.WriteLine(FileName);
+
+                ReadFile rf = new ReadFile();
+                rf.LoadFile(FileNameForLoadFile);
+                Console.Read();
             }
         }
 
