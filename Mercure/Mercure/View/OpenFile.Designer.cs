@@ -33,9 +33,10 @@
             this.Btn_Select = new System.Windows.Forms.Button();
             this.FileProgress = new System.Windows.Forms.ProgressBar();
             this.Txt_FilePath = new System.Windows.Forms.TextBox();
-            this.Btn_addNew = new System.Windows.Forms.Button();
-            this.Btn_upgrade = new System.Windows.Forms.Button();
-            this.textBox_showDetails = new System.Windows.Forms.TextBox();
+            this.Btn_AddNew = new System.Windows.Forms.Button();
+            this.Btn_Upgrade = new System.Windows.Forms.Button();
+            this.textBox_ShowDetails = new System.Windows.Forms.TextBox();
+            this.Btn_Close = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -76,41 +77,52 @@
             this.Txt_FilePath.Size = new System.Drawing.Size(298, 28);
             this.Txt_FilePath.TabIndex = 3;
             // 
-            // Btn_addNew
+            // Btn_AddNew
             // 
-            this.Btn_addNew.Location = new System.Drawing.Point(230, 236);
-            this.Btn_addNew.Name = "Btn_addNew";
-            this.Btn_addNew.Size = new System.Drawing.Size(131, 29);
-            this.Btn_addNew.TabIndex = 4;
-            this.Btn_addNew.Text = "Add New";
-            this.Btn_addNew.UseVisualStyleBackColor = true;
-            this.Btn_addNew.Click += new System.EventHandler(this.Btn_addNew_Click);
+            this.Btn_AddNew.Location = new System.Drawing.Point(230, 236);
+            this.Btn_AddNew.Name = "Btn_AddNew";
+            this.Btn_AddNew.Size = new System.Drawing.Size(131, 29);
+            this.Btn_AddNew.TabIndex = 4;
+            this.Btn_AddNew.Text = "Add New";
+            this.Btn_AddNew.UseVisualStyleBackColor = true;
+            this.Btn_AddNew.Click += new System.EventHandler(this.Btn_addNew_Click);
             // 
-            // Btn_upgrade
+            // Btn_Upgrade
             // 
-            this.Btn_upgrade.Location = new System.Drawing.Point(503, 236);
-            this.Btn_upgrade.Name = "Btn_upgrade";
-            this.Btn_upgrade.Size = new System.Drawing.Size(124, 29);
-            this.Btn_upgrade.TabIndex = 5;
-            this.Btn_upgrade.Text = "Upgrade";
-            this.Btn_upgrade.UseVisualStyleBackColor = true;
+            this.Btn_Upgrade.Location = new System.Drawing.Point(503, 236);
+            this.Btn_Upgrade.Name = "Btn_Upgrade";
+            this.Btn_Upgrade.Size = new System.Drawing.Size(124, 29);
+            this.Btn_Upgrade.TabIndex = 5;
+            this.Btn_Upgrade.Text = "Upgrade";
+            this.Btn_Upgrade.UseVisualStyleBackColor = true;
             // 
-            // textBox_showDetails
+            // textBox_ShowDetails
             // 
-            this.textBox_showDetails.Location = new System.Drawing.Point(173, 350);
-            this.textBox_showDetails.Multiline = true;
-            this.textBox_showDetails.Name = "textBox_showDetails";
-            this.textBox_showDetails.Size = new System.Drawing.Size(522, 123);
-            this.textBox_showDetails.TabIndex = 6;
+            this.textBox_ShowDetails.Location = new System.Drawing.Point(173, 350);
+            this.textBox_ShowDetails.Multiline = true;
+            this.textBox_ShowDetails.Name = "textBox_ShowDetails";
+            this.textBox_ShowDetails.Size = new System.Drawing.Size(522, 123);
+            this.textBox_ShowDetails.TabIndex = 6;
+            // 
+            // Btn_Close
+            // 
+            this.Btn_Close.Location = new System.Drawing.Point(620, 488);
+            this.Btn_Close.Name = "Btn_Close";
+            this.Btn_Close.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Close.TabIndex = 7;
+            this.Btn_Close.Text = "Close";
+            this.Btn_Close.UseVisualStyleBackColor = true;
+            this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
             // 
             // OpenFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 580);
-            this.Controls.Add(this.textBox_showDetails);
-            this.Controls.Add(this.Btn_upgrade);
-            this.Controls.Add(this.Btn_addNew);
+            this.Controls.Add(this.Btn_Close);
+            this.Controls.Add(this.textBox_ShowDetails);
+            this.Controls.Add(this.Btn_Upgrade);
+            this.Controls.Add(this.Btn_AddNew);
             this.Controls.Add(this.Txt_FilePath);
             this.Controls.Add(this.FileProgress);
             this.Controls.Add(this.Btn_Select);
@@ -129,8 +141,9 @@
         private System.Windows.Forms.Button Btn_Select;
         private System.Windows.Forms.ProgressBar FileProgress;
         private System.Windows.Forms.TextBox Txt_FilePath;
-        private System.Windows.Forms.Button Btn_addNew;
-        private System.Windows.Forms.Button Btn_upgrade;
-        private System.Windows.Forms.TextBox textBox_showDetails;
+        private System.Windows.Forms.Button Btn_AddNew;
+        private System.Windows.Forms.Button Btn_Upgrade;
+        private System.Windows.Forms.TextBox textBox_ShowDetails;
+        private System.Windows.Forms.Button Btn_Close;
     }
 }
