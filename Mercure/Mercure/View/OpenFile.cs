@@ -48,5 +48,19 @@ namespace Mercure
         {
 
         }
+
+        private void Btn_addNew_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /*
+         * close the window of Openfile after loading operations.
+         * 
+         */
+        private void Btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
