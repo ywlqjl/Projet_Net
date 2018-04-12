@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Mercure.Model;
+using Mercure.Controller;
 
 namespace Mercure
 {
@@ -27,11 +29,18 @@ namespace Mercure
                 string FileName = System.IO.Path.GetFileNameWithoutExtension(openFileDialog.FileName);
                 Txt_FilePath.Text = FileName;
                 Console.WriteLine(FileName);
+                // read file
+                ReadFile.LoadFile(FileNameForLoadFile);
+                List<OriArticle> L_OriArt = ReadFile.GetInfoArticleList();
 
-                ReadFile rf = new ReadFile();
-                rf.LoadFile(FileNameForLoadFile);
-                rf.GetInfoArticleList();
-                Console.Read();
+                // parse file
+                ParseArticles Parse_Article = new ParseArticles(L_OriArt);
+                List<Article> L_Art = Parse_Article.ParseArticle();
+                // insert into data base
+                //ArticleController Article_Controller = new ArticleController();
+                //Article_Controller.InsertArticles(L_Art);
+                //MarkController Mark_Controller = new MarkController();
+                //Mark_Controller.InsertMarks(Parse_Article.L_Mark1);
             }
         }
 
