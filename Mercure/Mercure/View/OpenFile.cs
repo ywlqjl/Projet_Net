@@ -39,5 +39,10 @@ namespace Mercure
         {
 
         }
+
+        private void Btn_addNew_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
