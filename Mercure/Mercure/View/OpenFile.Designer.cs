@@ -58,7 +58,7 @@
             // Btn_Select
             // 
             this.Btn_Select.Location = new System.Drawing.Point(401, 72);
-            this.Btn_Select.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Select.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Select.Name = "Btn_Select";
             this.Btn_Select.Size = new System.Drawing.Size(64, 21);
             this.Btn_Select.TabIndex = 1;
@@ -69,7 +69,7 @@
             // FileProgress
             // 
             this.FileProgress.Location = new System.Drawing.Point(85, 154);
-            this.FileProgress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FileProgress.Margin = new System.Windows.Forms.Padding(2);
             this.FileProgress.Name = "FileProgress";
             this.FileProgress.Size = new System.Drawing.Size(381, 21);
             this.FileProgress.TabIndex = 2;
@@ -77,7 +77,7 @@
             // Txt_FilePath
             // 
             this.Txt_FilePath.Location = new System.Drawing.Point(158, 72);
-            this.Txt_FilePath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_FilePath.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_FilePath.Name = "Txt_FilePath";
             this.Txt_FilePath.Size = new System.Drawing.Size(241, 21);
             this.Txt_FilePath.TabIndex = 3;
@@ -85,7 +85,7 @@
             // Btn_AddNew
             // 
             this.Btn_AddNew.Location = new System.Drawing.Point(135, 117);
-            this.Btn_AddNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_AddNew.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_AddNew.Name = "Btn_AddNew";
             this.Btn_AddNew.Size = new System.Drawing.Size(87, 19);
             this.Btn_AddNew.TabIndex = 4;
@@ -96,7 +96,7 @@
             // Btn_Update
             // 
             this.Btn_Update.Location = new System.Drawing.Point(323, 117);
-            this.Btn_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Update.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Update.Name = "Btn_Update";
             this.Btn_Update.Size = new System.Drawing.Size(83, 19);
             this.Btn_Update.TabIndex = 5;
@@ -107,16 +107,17 @@
             // textBox_ShowDetails
             // 
             this.textBox_ShowDetails.Location = new System.Drawing.Point(85, 188);
-            this.textBox_ShowDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_ShowDetails.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ShowDetails.Multiline = true;
             this.textBox_ShowDetails.Name = "textBox_ShowDetails";
+            this.textBox_ShowDetails.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox_ShowDetails.Size = new System.Drawing.Size(382, 129);
             this.textBox_ShowDetails.TabIndex = 6;
             // 
             // Btn_Close
             // 
             this.Btn_Close.Location = new System.Drawing.Point(413, 325);
-            this.Btn_Close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Close.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Close.Name = "Btn_Close";
             this.Btn_Close.Size = new System.Drawing.Size(50, 25);
             this.Btn_Close.TabIndex = 7;
@@ -137,7 +138,7 @@
             this.Controls.Add(this.FileProgress);
             this.Controls.Add(this.Btn_Select);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(572, 426);
             this.MinimumSize = new System.Drawing.Size(572, 426);

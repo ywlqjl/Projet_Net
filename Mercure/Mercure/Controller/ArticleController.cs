@@ -8,7 +8,7 @@ using Mercure.Model;
 
 namespace Mercure.Controller
 {
-    class ArticleController
+    class ArticleController : CommonDelegate
     {
         ArticleDAO ArticleDAO = new ArticleDAO();
         public Response InsertArticles(List<Article> L_Article) {
@@ -16,7 +16,13 @@ namespace Mercure.Controller
             try
             {
                 int Count = 0;
-                Count =  ArticleDAO.InsertArticles(L_Article);
+                foreach (Article Article in L_Article)
+                {
+                    Count = ArticleDAO.InsertArticle(Article);
+
+                    // event happen
+                    this.OnOperated(Count, "Inserting Article "+Article.RefArticle1);
+                }
                 Response.State1 = true;
                 Response.Message1 = Count.ToString();
                 return Response;
@@ -34,6 +40,10 @@ namespace Mercure.Controller
             try
             {
                 int Count = this.ArticleDAO.DeleteAllArticles();
+
+                // event happen
+                this.OnOperated(Count, "Deleting Article");
+
                 Response.State1 = true;
                 Response.Message1 = Count.ToString();
                 return Response;

@@ -22,3 +22,4 @@ C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercu
 C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.OpenFile.resources
 C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.Properties.Resources.resources
 C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.csproj.GenerateResource.Cache
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.ModifyArticle.resources

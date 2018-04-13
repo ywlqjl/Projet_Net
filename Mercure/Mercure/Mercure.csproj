@@ -56,6 +56,7 @@
     <Compile Include="Controller\ConnectionDB.cs" />
     <Compile Include="Controller\FamillyController.cs" />
     <Compile Include="Controller\MarkController.cs" />
+    <Compile Include="Controller\CommonDelegate.cs" />
     <Compile Include="Controller\ParseArticles.cs" />
     <Compile Include="Controller\SubFamillyController.cs" />
     <Compile Include="Dao\ArticleDAO.cs" />

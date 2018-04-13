@@ -75,6 +75,7 @@ namespace Mercure.Dao
                 Count = InsertCommand.ExecuteNonQuery();
                
                 Tran.Commit();
+                
             }
             return Count;
 

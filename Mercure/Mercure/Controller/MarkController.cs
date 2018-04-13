@@ -7,7 +7,7 @@ using Mercure.Dao;
 using Mercure.Model;
 namespace Mercure.Controller
 {
-    class MarkController
+    class MarkController:CommonDelegate
     {
         MarkDAO MarkDAO = new MarkDAO();
         public Response InsertMarks(List<Mark> L_Mark) {
@@ -15,7 +15,13 @@ namespace Mercure.Controller
             try
             {
                 int Count = 0;
-                Count = this.MarkDAO.InsertMarks(L_Mark);
+                foreach (Mark Mark in L_Mark)
+                {
+                    Count = MarkDAO.InsertMark(Mark);
+
+                    // event happen
+                    this.OnOperated(Count, "Inserting Mark " + Mark.Nom1);
+                }
                 Response.State1 = true;
                 Response.Message1 = Count.ToString();
                 return Response;
@@ -35,6 +41,9 @@ namespace Mercure.Controller
             try
             {
                 int Count = this.MarkDAO.DeleteAllMark();
+                // event happen
+                this.OnOperated(Count, "Deleting Mark");
+
                 Response.State1 = true;
                 Response.Message1 = Count.ToString();
                 return Response;

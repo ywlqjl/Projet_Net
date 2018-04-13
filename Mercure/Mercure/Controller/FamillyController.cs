@@ -7,7 +7,7 @@ using Mercure.Dao;
 using Mercure.Model;
 namespace Mercure.Controller
 {
-    class FamillyController
+    class FamillyController:CommonDelegate
     {
         FamillyDAO FamillyDAO = new FamillyDAO();
 
@@ -17,7 +17,13 @@ namespace Mercure.Controller
             try
             {
                 int Count = 0;
-                Count = this.FamillyDAO.InsertFamillys(L_Familly);
+                foreach (Familly Familly in L_Familly)
+                {
+                    Count = FamillyDAO.InsertFamilly(Familly);
+
+                    // event happen
+                    this.OnOperated(Count, "Inserting Familly " + Familly.Nom1);
+                }
                 Response.State1 = true;
                 Response.Message1 = Count.ToString();
                 return Response;
@@ -37,6 +43,9 @@ namespace Mercure.Controller
             try
             {
                 int Count = this.FamillyDAO.DeleteAllFamilly();
+
+                // event happen
+                this.OnOperated(Count, "Deleting Familly");
                 Response.State1 = true;
                 Response.Message1 = Count.ToString();
                 return Response;
