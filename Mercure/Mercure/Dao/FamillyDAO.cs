@@ -3,32 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Mercure.Model;
 using System.Data.SQLite;
 using Mercure.Controller;
+using Mercure.Model;
 namespace Mercure.Dao
 {
-
-    class MarkDAO
+    class FamillyDAO
     {
         SQLiteConnection Connection;
-        public MarkDAO() {
+        public FamillyDAO()
+        {
             this.Connection = ConnectionDB.GetConnection();
         }
 
-        private Mark MakeMark(int Ref, string Name) {
-            Mark Mark = new Mark();
-            Mark.RefMarque1 = Ref;
-            Mark.Nom1 = Name;
-            return Mark;
-        }
-
-        public Mark SelectMarkByRef(int Ref) {
-            Mark Mark = null;
+        public Familly SelectFamillyByRef(int Ref)
+        {
+            Familly Familly = null;
             SQLiteCommand SelectCommand = new SQLiteCommand(Connection);
             using (SQLiteTransaction Tran = Connection.BeginTransaction())
             {
-                SelectCommand.CommandText = "SELECT * FROM Marques WHERE RefMarque = @Ref";
+                SelectCommand.CommandText = "SELECT * FROM Familles WHERE RefFamille = @Ref";
                 SelectCommand.Parameters.AddRange(new[] {
                     new SQLiteParameter("@Ref",Ref)
                 });
@@ -38,51 +32,63 @@ namespace Mercure.Dao
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    Mark = this.MakeMark(int.Parse(reader["RefMarque"].ToString()),reader["Nom"].ToString());
+                    Familly = this.MakeFamilly( int.Parse(reader["RefFamille"].ToString()), reader["Nom"].ToString());
                 }
 
 
-                return Mark;
+                return Familly;
 
             }
         }
 
-        public int InsertMark(Mark Mark) {
-            SQLiteCommand InsertCommand = new SQLiteCommand(Connection);
+        private Familly MakeFamilly(int RefFamilly, string Name)
+        {
+            Familly Familly = new Familly();
+            Familly.RefFamille1 = RefFamilly;
+            Familly.Nom1 = Name;
+            
+
+            return Familly;
+        }
+
+        public int InsertFamilly(Familly Familly)
+        {
             int Count = 0;
+            SQLiteCommand InsertCommand = new SQLiteCommand(Connection);
             using (SQLiteTransaction Tran = Connection.BeginTransaction())
             {
-                if (this.SelectMarkByRef(Mark.RefMarque1) == null) {
-                    InsertCommand.CommandText = "INSERT INTO Marques VALUES(@Ref,@Nom)";
+                if (this.SelectFamillyByRef(Familly.RefFamille1) == null)
+                {
+                    InsertCommand.CommandText = "INSERT INTO Familles VALUES(@RefF,@Nom)";
                     InsertCommand.Parameters.AddRange(new[] {
-                    new SQLiteParameter("@Ref",Mark.RefMarque1),
-                    new SQLiteParameter("@Nom",Mark.Nom1)
+                    new SQLiteParameter("@RefF",Familly.RefFamille1),
+                    new SQLiteParameter("@Nom",Familly.Nom1)
                  });
                     Count = InsertCommand.ExecuteNonQuery();
                     Tran.Commit();
                 }
-                
+
             }
             return Count;
         }
 
-        public int InsertMarks(List<Mark> L_Mark)
+        public int InsertFamillys(List<Familly> L_Familly)
         {
             int Count = 0;
-            foreach (Mark Mark in L_Mark)
+            foreach (Familly Familly in L_Familly)
             {
-                Count += this.InsertMark(Mark);
+                Count += this.InsertFamilly(Familly);
             }
             return Count;
         }
 
-        public int DeleteAllMark()
+        public int DeleteAllFamilly()
         {
             int Count = 0;
             SQLiteCommand DeleteCommand = new SQLiteCommand(Connection);
             using (SQLiteTransaction Tran = Connection.BeginTransaction())
             {
-                DeleteCommand.CommandText = "Delete FROM Marques";
+                DeleteCommand.CommandText = "Delete FROM Familles";
 
 
                 Count = DeleteCommand.ExecuteNonQuery();
@@ -92,3 +98,4 @@ namespace Mercure.Dao
         }
     }
 }
+

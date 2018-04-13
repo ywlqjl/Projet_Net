@@ -7,15 +7,17 @@ using Mercure.Dao;
 using Mercure.Model;
 namespace Mercure.Controller
 {
-    class MarkController
+    class FamillyController
     {
-        MarkDAO MarkDAO = new MarkDAO();
-        public Response InsertMarks(List<Mark> L_Mark) {
+        FamillyDAO FamillyDAO = new FamillyDAO();
+
+        public Response InsertSubFamillys(List<Familly> L_Familly)
+        {
             Response Response = new Response();
             try
             {
                 int Count = 0;
-                Count = this.MarkDAO.InsertMarks(L_Mark);
+                Count = this.FamillyDAO.InsertFamillys(L_Familly);
                 Response.State1 = true;
                 Response.Message1 = Count.ToString();
                 return Response;
@@ -29,12 +31,12 @@ namespace Mercure.Controller
             
         }
 
-        public Response DeleteAllMark()
+        public Response DeleteAllFamilly()
         {
             Response Response = new Response();
             try
             {
-                int Count = this.MarkDAO.DeleteAllMark();
+                int Count = this.FamillyDAO.DeleteAllFamilly();
                 Response.State1 = true;
                 Response.Message1 = Count.ToString();
                 return Response;

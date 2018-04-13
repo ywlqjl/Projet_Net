@@ -14,7 +14,7 @@ namespace Mercure.Controller
         private ConnectionDB() { }
         public static SQLiteConnection GetConnection() {
             string Path = "Data Source=" + Environment.CurrentDirectory + "/Mercure.SQLite";
-            Console.WriteLine(Path);
+            
             if (Connection == null)
             {
                 Connection = new SQLiteConnection(Path);

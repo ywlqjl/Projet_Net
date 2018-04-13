@@ -54,11 +54,16 @@
   <ItemGroup>
     <Compile Include="Controller\ArticleController.cs" />
     <Compile Include="Controller\ConnectionDB.cs" />
+    <Compile Include="Controller\FamillyController.cs" />
     <Compile Include="Controller\MarkController.cs" />
     <Compile Include="Controller\ParseArticles.cs" />
+    <Compile Include="Controller\SubFamillyController.cs" />
     <Compile Include="Dao\ArticleDAO.cs" />
+    <Compile Include="Dao\FamillyDAO.cs" />
     <Compile Include="Dao\MarkDAO.cs" />
+    <Compile Include="Dao\SubFamillyDAO.cs" />
     <Compile Include="Model\OriArticle.cs" />
+    <Compile Include="Model\Response.cs" />
     <Compile Include="View\Main.cs">
       <SubType>Form</SubType>
     </Compile>
