@@ -28,6 +28,8 @@ namespace Mercure
         private string Message;
         private int TotalData = 0;
 
+        private bool StopLoading = false;
+
         // delegate for progress bar
         private delegate void UpdateProgressBar(int Count, string Msg);
 
@@ -42,23 +44,35 @@ namespace Mercure
             this.Statistic += Count;
             this.Message = Msg;
 
-            //this.Statistic = this.Statistic /TotalData *100;
-            if (this.Statistic > 100)
+            if (StopLoading)
             {
-                this.Statistic = 100;
+                this.Dispose();
             }
-
-            if (this.InvokeRequired)
+            else
             {
-                UpdateProgressBar UpdateBar = new UpdateProgressBar(UpdateStatic);
+                //this.Statistic = this.Statistic /TotalData *100;
+                if (this.Statistic > 100)
+                {
+                    this.Statistic = 100;
+                }
 
-                this.Invoke(UpdateBar, this.Statistic, Msg);
+                if (this.InvokeRequired)
+                {
+                    UpdateProgressBar UpdateBar = new UpdateProgressBar(UpdateStatic);
 
+                    this.Invoke(UpdateBar, this.Statistic, Msg);
+
+                }
+                else
+                {
+                    this.FileProgress.Value = this.Statistic;
+                    this.textBox_ShowDetails.AppendText(Msg + "\n");
+                }
+
+                this.label_ShowProgressState.Text = "Loading...";
+                Application.DoEvents();
             }
-            else {
-                this.FileProgress.Value = this.Statistic;
-                this.textBox_ShowDetails.AppendText(Msg+"\n");
-            }
+          
         }
 
         private void Select_btn_Click(object sender, EventArgs e)
@@ -123,11 +137,14 @@ namespace Mercure
                 
                 Response Response_Familly = Familly_Controller.InsertSubFamillys(Parse_Article.L_Familly1);
 
-                this.textBox_ShowDetails.AppendText("Finished!\n");
+                //this.textBox_ShowDetails.AppendText("Finished!\n");
+
+                this.label_ShowProgressState.Text = "Finished!";
             }
             else {
                 // error no file
-                this.textBox_ShowDetails.AppendText("No file to import!\n");
+                //this.textBox_ShowDetails.AppendText("No file to import!\n");
+                this.label_ShowProgressState.Text = "No file to import!";
             }
            
         }
@@ -138,6 +155,7 @@ namespace Mercure
          */
         private void Btn_Close_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
@@ -174,6 +192,14 @@ namespace Mercure
                 // error
                 this.textBox_ShowDetails.AppendText("No file to import!\n");
             }
+        }
+
+        private void Btn_CancelLoad_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to cancel?", "Stop", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+                StopLoading = false;
+            else
+                StopLoading = true;
         }
     }
 }

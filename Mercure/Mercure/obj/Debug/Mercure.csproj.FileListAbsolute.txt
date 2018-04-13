@@ -23,3 +23,16 @@ C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercu
 C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.Properties.Resources.resources
 C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.csproj.GenerateResource.Cache
 C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.ModifyArticle.resources
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\bin\Debug\Mercure.exe.config
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.exe
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.pdb
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\bin\Debug\Mercure.exe
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\bin\Debug\Mercure.pdb
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\bin\Debug\System.Data.SQLite.dll
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\bin\Debug\System.Data.SQLite.xml
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.csprojResolveAssemblyReference.cache
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.Main.resources
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.ModifyArticle.resources
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.OpenFile.resources
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.Properties.Resources.resources
+C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.csproj.GenerateResource.Cache
