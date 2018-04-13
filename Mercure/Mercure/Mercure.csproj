@@ -74,6 +74,12 @@
     <Compile Include="Model\Familly.cs" />
     <Compile Include="Model\Mark.cs" />
     <Compile Include="Model\SubFamilly.cs" />
+    <Compile Include="View\ModifyArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ModifyArticle.Designer.cs">
+      <DependentUpon>ModifyArticle.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\OpenFile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="Controller\ReadFile.cs" />
     <EmbeddedResource Include="View\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ModifyArticle.resx">
+      <DependentUpon>ModifyArticle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\OpenFile.resx">
       <DependentUpon>OpenFile.cs</DependentUpon>
