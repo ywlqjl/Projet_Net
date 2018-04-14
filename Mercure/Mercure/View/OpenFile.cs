@@ -50,7 +50,9 @@ namespace Mercure
             }
             else
             {
-                //this.Statistic = this.Statistic /TotalData *100;
+                Console.WriteLine(this.Statistic);
+                this.Statistic = Convert.ToInt32((this.Statistic / (float)TotalData) *100);
+               
                 if (this.Statistic > 100)
                 {
                     this.Statistic = 100;
@@ -107,6 +109,7 @@ namespace Mercure
         private void Btn_addNew_Click(object sender, EventArgs e)
         {
             this.textBox_ShowDetails.Clear();
+            this.FileProgress.Value = 0;
             if (this.Parse_Article != null && this.L_Art != null)
             {
                 // delegate
@@ -162,6 +165,7 @@ namespace Mercure
         private void Btn_Update_Click(object sender, EventArgs e)
         {
             this.textBox_ShowDetails.Clear();
+            this.FileProgress.Value = 0;
             if (this.Parse_Article != null && this.L_Art != null)
             {
                 // delegate
