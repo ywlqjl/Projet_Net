@@ -53,3 +53,6 @@ C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug
 C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.OpenFile.resources
 C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.Properties.Resources.resources
 C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.csproj.GenerateResource.Cache
+C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplayFamille.resources
+C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplayMarque.resources
+C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplaySousFamille.resources

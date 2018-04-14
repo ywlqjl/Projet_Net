@@ -89,6 +89,24 @@
     <Compile Include="View\AddSousFamille.Designer.cs">
       <DependentUpon>AddSousFamille.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DisplayFamille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DisplayFamille.Designer.cs">
+      <DependentUpon>DisplayFamille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DisplayMarque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DisplayMarque.Designer.cs">
+      <DependentUpon>DisplayMarque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\DisplaySousFamille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DisplaySousFamille.Designer.cs">
+      <DependentUpon>DisplaySousFamille.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +143,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AddSousFamille.resx">
       <DependentUpon>AddSousFamille.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DisplayFamille.resx">
+      <DependentUpon>DisplayFamille.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DisplayMarque.resx">
+      <DependentUpon>DisplayMarque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DisplaySousFamille.resx">
+      <DependentUpon>DisplaySousFamille.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

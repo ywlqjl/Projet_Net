@@ -171,9 +171,9 @@
             this.Label_TotalCount.AutoSize = true;
             this.Label_TotalCount.Location = new System.Drawing.Point(44, 353);
             this.Label_TotalCount.Name = "Label_TotalCount";
-            this.Label_TotalCount.Size = new System.Drawing.Size(35, 13);
+            this.Label_TotalCount.Size = new System.Drawing.Size(51, 13);
             this.Label_TotalCount.TabIndex = 4;
-            this.Label_TotalCount.Text = "label1";
+            this.Label_TotalCount.Text = "Lbl_Total";
             // 
             // articleToolStripMenuItem
             // 
@@ -218,6 +218,7 @@
             this.afficherToolStripMenuItem.Name = "afficherToolStripMenuItem";
             this.afficherToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.afficherToolStripMenuItem.Text = "Afficher";
+            this.afficherToolStripMenuItem.Click += new System.EventHandler(this.afficherToolStripMenuItem_Click);
             // 
             // ajouterToolStripMenuItem1
             // 
@@ -240,6 +241,7 @@
             this.afficherToolStripMenuItem1.Name = "afficherToolStripMenuItem1";
             this.afficherToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.afficherToolStripMenuItem1.Text = "Afficher";
+            this.afficherToolStripMenuItem1.Click += new System.EventHandler(this.afficherToolStripMenuItem1_Click);
             // 
             // ajouterToolStripMenuItem2
             // 
@@ -262,6 +264,7 @@
             this.afficherToolStripMenuItem3.Name = "afficherToolStripMenuItem3";
             this.afficherToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
             this.afficherToolStripMenuItem3.Text = "Afficher";
+            this.afficherToolStripMenuItem3.Click += new System.EventHandler(this.afficherToolStripMenuItem3_Click);
             // 
             // ajouterToolStripMenuItem3
             // 

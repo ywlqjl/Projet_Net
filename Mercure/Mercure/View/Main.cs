@@ -155,5 +155,23 @@ namespace Mercure
             Add_Marque.ShowDialog(this);
             //TODO : update list view
         }
+
+        private void afficherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DisplayFamille Display_Familles = new DisplayFamille();
+            Display_Familles.ShowDialog(this);
+        }
+
+        private void afficherToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DisplaySousFamille Display_Sous_Familles = new DisplaySousFamille();
+            Display_Sous_Familles.ShowDialog(this);
+        }
+
+        private void afficherToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            DisplayMarque Display_Marques = new DisplayMarque();
+            Display_Marques.ShowDialog(this);
+        }
     }
 }
