@@ -18,6 +18,9 @@ namespace Mercure
         // arrtibuts
         List<Article> ListArticle = new List<Article>();
 
+        //For Sorting List View
+        private int sortColumn = -1;
+
         public Main()
         {
             InitializeComponent();
@@ -90,8 +93,8 @@ namespace Mercure
 
         private void ColumnClickFunction(object sender, ColumnClickEventArgs e)
         {
-            
-            ArticleController ArticleController = new ArticleController();
+
+            /*ArticleController ArticleController = new ArticleController();
             ListArticle = ArticleController.GetAllArticle();
 
             int Column = e.Column;
@@ -125,7 +128,30 @@ namespace Mercure
                 }
                 this.BindDataToView(L_Item);
                 
+            }*/
+            
+            // Determine whether the column is the same as the last column clicked.
+            if (e.Column != sortColumn)
+            {
+                // Set the sort column to the new column.
+                sortColumn = e.Column;
+                // Set the sort order to ascending by default.
+                listView_ShowBD.Sorting = System.Windows.Forms.SortOrder.Ascending;
             }
+            else
+            {
+                // Determine what the last sort order was and change it.
+                if (listView_ShowBD.Sorting == System.Windows.Forms.SortOrder.Ascending)
+                    listView_ShowBD.Sorting = System.Windows.Forms.SortOrder.Descending;
+                else
+                    listView_ShowBD.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            }
+
+            // Call the sort method to manually sort.
+            listView_ShowBD.Sort();
+            // Set the ListViewItemSorter property to a new ListViewItemComparer
+            // object.
+            this.listView_ShowBD.ListViewItemSorter = new ListViewItemComparer(e.Column, listView_ShowBD.Sorting);
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -173,5 +199,7 @@ namespace Mercure
             DisplayMarque Display_Marques = new DisplayMarque();
             Display_Marques.ShowDialog(this);
         }
+
+        
     }
 }

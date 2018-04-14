@@ -55,6 +55,7 @@
     <Compile Include="Controller\ArticleController.cs" />
     <Compile Include="Controller\ConnectionDB.cs" />
     <Compile Include="Controller\FamillyController.cs" />
+    <Compile Include="Controller\ListViewItemComparer.cs" />
     <Compile Include="Controller\MarkController.cs" />
     <Compile Include="Controller\CommonDelegate.cs" />
     <Compile Include="Controller\ParseArticles.cs" />
