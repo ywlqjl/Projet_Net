@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mercure.Controller;
 using Mercure.Model;
+using Mercure.View;
 
 namespace Mercure
 {
@@ -125,6 +126,34 @@ namespace Mercure
                 this.BindDataToView(L_Item);
                 
             }
+        }
+
+        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddArticle Add_Article = new AddArticle();
+            Add_Article.ShowDialog(this);
+            //TODO : update list view
+        }
+
+        private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AddFamille Add_Famille = new AddFamille();
+            Add_Famille.ShowDialog(this);
+            //TODO : update list view
+        }
+
+        private void ajouterToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            AddSousFamille Add_Sous_Famille = new AddSousFamille();
+            Add_Sous_Famille.ShowDialog(this);
+            //TODO : update list view
+        }
+
+        private void ajouterToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            AddMarque Add_Marque = new AddMarque();
+            Add_Marque.ShowDialog(this);
+            //TODO : update list view
         }
     }
 }
