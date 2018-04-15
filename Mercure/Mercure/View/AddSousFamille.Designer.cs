@@ -112,6 +112,7 @@
             this.Btn_Cancel_Sous_Famille.TabIndex = 5;
             this.Btn_Cancel_Sous_Famille.Text = "Cancel";
             this.Btn_Cancel_Sous_Famille.UseVisualStyleBackColor = true;
+            this.Btn_Cancel_Sous_Famille.Click += new System.EventHandler(this.Btn_Cancel_Sous_Famille_Click);
             // 
             // Btn_Add_Sous_Famille
             // 
@@ -121,6 +122,7 @@
             this.Btn_Add_Sous_Famille.TabIndex = 4;
             this.Btn_Add_Sous_Famille.Text = "Add";
             this.Btn_Add_Sous_Famille.UseVisualStyleBackColor = true;
+            this.Btn_Add_Sous_Famille.Click += new System.EventHandler(this.Btn_Add_Sous_Famille_Click);
             // 
             // AddSousFamille
             // 
