@@ -41,7 +41,7 @@ namespace Mercure.Dao
             }
         }
 
-        private Familly MakeFamilly(int RefFamilly, string Name)
+        public Familly MakeFamilly(int RefFamilly, string Name)
         {
             Familly Familly = new Familly();
             Familly.RefFamille1 = RefFamilly;
@@ -92,6 +92,49 @@ namespace Mercure.Dao
 
 
                 Count = DeleteCommand.ExecuteNonQuery();
+                Tran.Commit();
+            }
+            return Count;
+        }
+
+        /// <summary>
+        /// Delete one familly
+        /// </summary>
+        /// <param name="RefFamilly">Familly Reference</param>
+        /// <returns>Number of row</returns>
+        public int DeleteFamilly(int RefFamilly)
+        {
+            int Count = 0;
+            SQLiteCommand DeleteCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                DeleteCommand.CommandText = "Delete FROM Familles WHERE RefFamille = @Ref";
+                DeleteCommand.Parameters.AddRange(new[] {
+                    new SQLiteParameter("@Ref",RefFamilly)
+                });
+                Count = DeleteCommand.ExecuteNonQuery();
+                Tran.Commit();
+            }
+            return 0;
+        }
+
+        /// <summary>
+        /// Update familly
+        /// </summary>
+        /// <param name="Familly">Object Familly</param>
+        /// <returns>Number of row</returns>
+        public int UpdateFamilly(Familly Familly)
+        {
+            int Count = 0;
+            SQLiteCommand InsertCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                InsertCommand.CommandText = "UPDATE Familles SET Nom = @Nom WHERE RefFamille = @Ref";
+                InsertCommand.Parameters.AddRange(new[] {     
+                    new SQLiteParameter("@Nom",Familly.Nom1),
+                    new SQLiteParameter("@Ref",Familly.RefFamille1),
+                });
+                Count = InsertCommand.ExecuteNonQuery();
                 Tran.Commit();
             }
             return Count;

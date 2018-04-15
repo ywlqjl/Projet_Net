@@ -41,7 +41,7 @@ namespace Mercure.Dao
             }
         }
 
-        private SubFamilly MakeSubFamilly(int RefSub,int RefFamilly, string Name)
+        public SubFamilly MakeSubFamilly(int RefSub,int RefFamilly, string Name)
         {
             SubFamilly SubFamilly = new SubFamilly();
             SubFamilly.RefSousFamille1 = RefSub;
@@ -95,6 +95,51 @@ namespace Mercure.Dao
             {
                 DeleteCommand.CommandText = "Delete FROM SousFamilles";
                 Count = DeleteCommand.ExecuteNonQuery();
+                Tran.Commit();
+            }
+            return Count;
+        }
+
+        /// <summary>
+        /// Delete one Subfamilly
+        /// </summary>
+        /// <param name="RefSubFamilly">SubFamilly Reference</param>
+        /// <returns>Number of row</returns>
+        public int DeleteSubFamilly(int RefSubFamilly)
+        {
+            int Count = 0;
+            SQLiteCommand DeleteCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                DeleteCommand.CommandText = "Delete FROM SousFamilles WHERE RefSousFamille = @Ref";
+                DeleteCommand.Parameters.AddRange(new[] {
+                    new SQLiteParameter("@RefSUB",RefSubFamilly),
+                 });
+                Count = DeleteCommand.ExecuteNonQuery();
+                Tran.Commit();
+            }
+            return Count;
+        }
+
+
+        /// <summary>
+        /// Update SubFamilly
+        /// </summary>
+        /// <param name="SubFamilly">Object SubFamilly</param>
+        /// <returns>Number of row</returns>
+        public int UpdateSubFamilly(SubFamilly SubFamilly)
+        {
+            int Count = 0;
+            SQLiteCommand InsertCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                InsertCommand.CommandText = "UPDATE SousFamilles SET Nom = @Nom, RefFamille = @RefFamille WHERE RefMarque = @Ref";
+                InsertCommand.Parameters.AddRange(new[] {
+                    new SQLiteParameter("@Nom",SubFamilly.Nom1),
+                    new SQLiteParameter("@RefFamille",SubFamilly.RefFamille1.RefFamille1),
+                    new SQLiteParameter("@Ref",SubFamilly.RefSousFamille1),
+                });
+                Count = InsertCommand.ExecuteNonQuery();
                 Tran.Commit();
             }
             return Count;

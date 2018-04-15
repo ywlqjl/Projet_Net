@@ -55,5 +55,92 @@ namespace Mercure.Controller
                 return Response;
             }
         }
+
+        /// <summary>
+        /// Delete one Mark
+        /// </summary>
+        /// <param name="RefMark">Mark Reference</param>
+        /// <returns>Response Object</returns>
+        public Response DeleteMark(int RefMark)
+        {
+            Response Response = new Response();
+            try
+            {
+                int Count = this.MarkDAO.DeleteMark(RefMark);
+                Response.State1 = true;
+                Response.Message1 = Count.ToString();
+                return Response;
+            }
+            catch (Exception E)
+            {
+                Response.State1 = false;
+                Response.Message1 = E.Message;
+                return Response;
+            }
+        }
+
+        /// <summary>
+        /// Update Mark
+        /// </summary>
+        /// <param name="RefMark">Mark Refernece</param>
+        /// <param name="Name">Mark Name</param>
+        /// <returns>Response Object</returns>
+        public Response UpdateMark(int RefMark, string Name)
+        {
+            Response Response = new Response();
+            try
+            {
+                int Count = 0;
+                Mark Mark = this.MarkDAO.MakeMark(RefMark, Name);
+                Count = this.MarkDAO.UpdateMark(Mark);
+
+                Response.State1 = true;
+                Response.Message1 = Count.ToString();
+            }
+            catch (Exception E)
+            {
+                Response.State1 = false;
+                Response.Message1 = E.Message;
+            }
+            return Response;
+        }
+
+        /// <summary>
+        /// Insert one Mark
+        /// </summary>
+        /// <param name="RefMark">Mark Reference</param>
+        /// <param name="Name">Mark Name</param>
+        /// <returns>Response Object</returns>
+        public Response InsertMark(int RefMark, string Name)
+        {
+            Response Response = new Response();
+            try
+            {
+                Mark Mark = this.MarkDAO.MakeMark(RefMark, Name);
+                int Count = 0;
+                Count = MarkDAO.InsertMark(Mark);
+                Response.State1 = true;
+                Response.Message1 = Count.ToString();
+                return Response;
+            }
+            catch (Exception E)
+            {
+                Response.State1 = false;
+                Response.Message1 = E.Message;
+                return Response;
+            }
+
+        }
+
+        /// <summary>
+        /// Get Mark by reference
+        /// </summary>
+        /// <param name="RefMark">Mark Reference</param>
+        /// <returns>Object Mark</returns>
+        public Mark GetMarkByRef(int RefMark)
+        {
+            return this.MarkDAO.SelectMarkByRef(RefMark);
+        }
+
     }
 }

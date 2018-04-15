@@ -56,3 +56,10 @@ C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug
 C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplayFamille.resources
 C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplayMarque.resources
 C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplaySousFamille.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.AddArticle.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.AddFamille.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.AddMarque.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.AddSousFamille.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplayFamille.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplayMarque.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplaySousFamille.resources

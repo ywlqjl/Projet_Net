@@ -15,7 +15,7 @@ namespace Mercure.Dao
             this.Connection = ConnectionDB.GetConnection();
         }
 
-        private Article MakeArticle(string Ref, string Des, int RefSubF, int RefMark, float Price, int Quantity) {
+        public Article MakeArticle(string Ref, string Des, int RefSubF, int RefMark, float Price, int Quantity) {
             Article Article = new Article();
             Article.RefArticle1 = Ref;
             Article.Description1 = Des;
@@ -73,7 +73,6 @@ namespace Mercure.Dao
 
 
                 Count = InsertCommand.ExecuteNonQuery();
-                Console.WriteLine("Count = "+Count);
                 Tran.Commit();
                 
             }
@@ -114,13 +113,27 @@ namespace Mercure.Dao
             using (SQLiteTransaction Tran = Connection.BeginTransaction())
             {
                 DeleteCommand.CommandText = "Delete FROM Articles";
-               
-
                 Count =  DeleteCommand.ExecuteNonQuery();
                 Tran.Commit(); 
             }
 
-            return Count;
+            return 0;
+        }
+
+        public int DeleteArticle(string RefArticle)
+        {
+            int Count = 0;
+            SQLiteCommand DeleteCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                DeleteCommand.CommandText = "Delete FROM Articles WHERE RefArticle = @Ref";
+                DeleteCommand.Parameters.AddRange(new[] {
+                    new SQLiteParameter("@Ref",RefArticle)
+                });
+                Count = DeleteCommand.ExecuteNonQuery();
+                Tran.Commit();
+            }
+            return 0;
         }
 
         public List<Article> SelectAllArticle()
@@ -141,6 +154,29 @@ namespace Mercure.Dao
                 }
             }
             return L_Article;
+        }
+
+
+        public int UpdateArticle(Article Article)
+        {
+            int Count = 0;
+            SQLiteCommand InsertCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                InsertCommand.CommandText = "UPDATE Articles SET Description = @Des, RefSousFamille = @RefSubF,RefMarque = @RefM, PrixHT = @Price,Quantite = @Quantity WHERE RefArticle = @Ref";
+                InsertCommand.Parameters.AddRange(new[] {        
+                    new SQLiteParameter("@Des",Article.Description1),
+                    new SQLiteParameter("@RefSubF",Article.RefSubFamilly1.RefSousFamille1),
+                    new SQLiteParameter("@RefM",Article.RefMark1.RefMarque1),
+                    new SQLiteParameter("@Price",Article.PriceHT1),
+                    new SQLiteParameter("@Quantity",Article.Quantity1),
+                    new SQLiteParameter("@Ref",Article.RefArticle1),
+                });
+                Count = InsertCommand.ExecuteNonQuery();
+                Tran.Commit();
+
+            }
+            return Count;
         }
     }
 }

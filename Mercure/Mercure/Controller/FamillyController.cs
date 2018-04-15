@@ -11,7 +11,7 @@ namespace Mercure.Controller
     {
         FamillyDAO FamillyDAO = new FamillyDAO();
 
-        public Response InsertSubFamillys(List<Familly> L_Familly)
+        public Response InsertFamillys(List<Familly> L_Familly)
         {
             Response Response = new Response();
             try
@@ -56,6 +56,92 @@ namespace Mercure.Controller
                 Response.Message1 = E.Message;
                 return Response;
             }
+        }
+
+        /// <summary>
+        /// Delete one familly
+        /// </summary>
+        /// <param name="RefFamilly">Familly Reference</param>
+        /// <returns>Response Object</returns>
+        public Response DeleteFamilly(int RefFamilly)
+        {
+            Response Response = new Response();
+            try
+            {
+                int Count = this.FamillyDAO.DeleteFamilly(RefFamilly);
+                Response.State1 = true;
+                Response.Message1 = Count.ToString();
+                return Response;
+            }
+            catch (Exception E)
+            {
+                Response.State1 = false;
+                Response.Message1 = E.Message;
+                return Response;
+            }
+        }
+
+        /// <summary>
+        /// Update Familly
+        /// </summary>
+        /// <param name="RefFamilly">Familly Reference</param>
+        /// <param name="Name">Familly Name</param>
+        /// <returns>Response Object</returns>
+        public Response UpdateFamilly(int RefFamilly, string Name)
+        {
+            Response Response = new Response();
+            try
+            {
+                int Count = 0;
+                Familly Familly = this.FamillyDAO.MakeFamilly(RefFamilly, Name);
+                Count = this.FamillyDAO.UpdateFamilly(Familly);
+
+                Response.State1 = true;
+                Response.Message1 = Count.ToString();
+            }
+            catch (Exception E)
+            {
+                Response.State1 = false;
+                Response.Message1 = E.Message;
+            }
+            return Response;
+        }
+
+        /// <summary>
+        /// Insert one familly
+        /// </summary>
+        /// <param name="RefFamilly">Familly Reference</param>
+        /// <param name="Name">Familly Name</param>
+        /// <returns>Response Object</returns>
+        public Response InsertFamilly(int RefFamilly, string Name)
+        {
+            Response Response = new Response();
+            try
+            {
+                Familly Familly = this.FamillyDAO.MakeFamilly(RefFamilly, Name);
+                int Count = 0;  
+                Count = FamillyDAO.InsertFamilly(Familly);
+                Response.State1 = true;
+                Response.Message1 = Count.ToString();
+                return Response;
+            }
+            catch (Exception E)
+            {
+                Response.State1 = false;
+                Response.Message1 = E.Message;
+                return Response;
+            }
+
+        }
+
+        /// <summary>
+        /// Get Familly by refernece
+        /// </summary>
+        /// <param name="RefFamilly">Familly reference</param>
+        /// <returns>Object Familly</returns>
+        public Familly GetFamillyByRef(int RefFamilly)
+        {
+            return this.FamillyDAO.SelectFamillyByRef(RefFamilly);
         }
     }
 }
