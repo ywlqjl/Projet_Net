@@ -173,7 +173,7 @@
             this.Btn_Add_Article.TabIndex = 2;
             this.Btn_Add_Article.Text = "Add";
             this.Btn_Add_Article.UseVisualStyleBackColor = true;
-            this.Btn_Add_Article.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_Add_Article.Click += new System.EventHandler(this.Btn_Add_Article_Click);
             // 
             // Btn_Cancel_Article
             // 
@@ -183,6 +183,7 @@
             this.Btn_Cancel_Article.TabIndex = 3;
             this.Btn_Cancel_Article.Text = "Cancel";
             this.Btn_Cancel_Article.UseVisualStyleBackColor = true;
+            this.Btn_Cancel_Article.Click += new System.EventHandler(this.Btn_Cancel_Article_Click);
             // 
             // AddArticle
             // 
