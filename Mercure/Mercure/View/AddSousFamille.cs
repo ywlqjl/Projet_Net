@@ -78,13 +78,11 @@ namespace Mercure.View
                 }
                 catch (FormatException e1)
                 {
-                    //Message de l'exception pour notifier l'utilisateur
                     MessageBox.Show(e1.Message, "Error Add Sub Familly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                //Message de remplir pour l'utilisateur
                 MessageBox.Show("Please fill in all the fields", "Error Add Sub Familly", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
