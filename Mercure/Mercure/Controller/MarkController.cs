@@ -142,5 +142,14 @@ namespace Mercure.Controller
             return this.MarkDAO.SelectMarkByRef(RefMark);
         }
 
+        /// <summary>
+        /// Get all mark
+        /// </summary>
+        /// <returns>List of mark</returns>
+        public List<Mark> GetAllMark()
+        {
+            return this.MarkDAO.SelectAllMark();
+        }
+
     }
 }

@@ -144,5 +144,28 @@ namespace Mercure.Dao
             }
             return Count;
         }
+
+        /// <summary>
+        /// Select all SubFamilly
+        /// </summary>
+        /// <returns>List of subfamilly</returns>
+        public List<SubFamilly> SelectAllSubFamilly()
+        {
+            List<SubFamilly> L_SubFamilly = new List<SubFamilly>();
+            SQLiteCommand SelectCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                SelectCommand.CommandText = "SELECT * FROM SousFamilles";
+
+                SQLiteDataReader reader = SelectCommand.ExecuteReader();
+                Tran.Commit();
+                while (reader.Read())
+                {
+                    SubFamilly SubFamilly = this.MakeSubFamilly(int.Parse(reader["RefSousFamille"].ToString()), int.Parse(reader["RefFamille"].ToString()), reader["Nom"].ToString());
+                    L_SubFamilly.Add(SubFamilly);
+                }
+            }
+            return L_SubFamilly;
+        }
     }
 }

@@ -142,5 +142,14 @@ namespace Mercure.Controller
             return this.SubFamillyDAO.SelectSubFamillyByRef(RefSubFamilly);
         }
 
+        /// <summary>
+        /// Get all subfamilly
+        /// </summary>
+        /// <returns>List of subfamilly</returns>
+        public List<SubFamilly> GetAllSubFamilly()
+        {
+            return this.SubFamillyDAO.SelectAllSubFamilly();
+        }
+
     }
 }

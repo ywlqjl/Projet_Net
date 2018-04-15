@@ -134,5 +134,27 @@ namespace Mercure.Dao
             }
             return Count;
         }
+
+        /// <summary>
+        /// Select all mark
+        /// </summary>
+        /// <returns>List of mark</returns>
+        public List<Mark> SelectAllMark()
+        {
+            List<Mark> L_Mark = new List<Mark>();
+            SQLiteCommand SelectCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                SelectCommand.CommandText = "SELECT * FROM Marques";
+                SQLiteDataReader reader = SelectCommand.ExecuteReader();
+                Tran.Commit();
+                while (reader.Read())
+                {
+                    Mark Mark =  this.MakeMark(int.Parse(reader["RefMarque"].ToString()), reader["Nom"].ToString());
+                    L_Mark.Add(Mark);
+                }
+            }
+            return L_Mark;
+        }
     }
 }

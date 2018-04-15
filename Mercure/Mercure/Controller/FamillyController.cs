@@ -143,5 +143,14 @@ namespace Mercure.Controller
         {
             return this.FamillyDAO.SelectFamillyByRef(RefFamilly);
         }
+
+        /// <summary>
+        /// Get all familly
+        /// </summary>
+        /// <returns>List of familly</returns>
+        public List<Familly> GetAllFamilly()
+        {
+            return this.FamillyDAO.SelectAllFamilly();
+        }
     }
 }
