@@ -91,6 +91,7 @@
             this.Btn_Cancel_Marque.TabIndex = 5;
             this.Btn_Cancel_Marque.Text = "Cancel";
             this.Btn_Cancel_Marque.UseVisualStyleBackColor = true;
+            this.Btn_Cancel_Marque.Click += new System.EventHandler(this.Btn_Cancel_Marque_Click);
             // 
             // Btn_Add_Marque
             // 
@@ -100,6 +101,7 @@
             this.Btn_Add_Marque.TabIndex = 4;
             this.Btn_Add_Marque.Text = "Add";
             this.Btn_Add_Marque.UseVisualStyleBackColor = true;
+            this.Btn_Add_Marque.Click += new System.EventHandler(this.Btn_Add_Marque_Click);
             // 
             // AddMarque
             // 
