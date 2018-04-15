@@ -138,7 +138,7 @@ namespace Mercure
 
                 //insert familly
                 
-                Response Response_Familly = Familly_Controller.InsertSubFamillys(Parse_Article.L_Familly1);
+                Response Response_Familly = Familly_Controller.InsertFamillys(Parse_Article.L_Familly1);
 
                 //this.textBox_ShowDetails.AppendText("Finished!\n");
 
@@ -188,7 +188,7 @@ namespace Mercure
 
                 //insert familly
                 
-                Response Response_Familly = Familly_Controller.InsertSubFamillys(Parse_Article.L_Familly1);
+                Response Response_Familly = Familly_Controller.InsertFamillys(Parse_Article.L_Familly1);
 
                 this.textBox_ShowDetails.AppendText("Finished!\n");
             }
