@@ -49,7 +49,7 @@ namespace Mercure.View
                         MessageBox.Show("MArk exists already in DataBase", "Error Add Mark", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-
+                    this.DialogResult = DialogResult.OK;
                     this.Dispose();
                 }
                 catch (FormatException e1)

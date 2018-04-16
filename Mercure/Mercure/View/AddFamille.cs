@@ -47,7 +47,7 @@ namespace Mercure.View
                         MessageBox.Show("This reference already exists in DataBase", "Error Add Familly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-
+                    this.DialogResult = DialogResult.OK;
                     this.Dispose();
                 }
                 catch(FormatException e2)

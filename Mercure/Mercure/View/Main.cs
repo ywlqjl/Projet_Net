@@ -13,10 +13,15 @@ using Mercure.View;
 
 namespace Mercure
 {
+
+
     public partial class Main : Form
     {
         // arrtibuts
         List<Article> ListArticle = new List<Article>();
+        private System.Collections.Specialized.StringCollection colstr = new System.Collections.Specialized.StringCollection();
+        
+     
 
         //For Sorting List View
         private int sortColumn = -1;
@@ -25,12 +30,12 @@ namespace Mercure
         {
             InitializeComponent();
             listView_ShowBD_DataBinding();
+            //this.listView_ShowBD.ItemActivate += new EventHandler(listView_ShowBD.item); 
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFile Openfile = new OpenFile();
-            //Openfile.
             Openfile.ShowDialog();
 
             //Console.WriteLine(Openfile.DialogResult);
@@ -75,9 +80,25 @@ namespace Mercure
 
         private void listView_ShowBD_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //ListView.SelectedListViewItemCollection Article = this.listView_ShowBD.SelectedItems;
+            
+
+
+            //ListViewHitTestInfo info = listView_ShowBD.HitTest(e.X, e.Y);
+            /* if (breakfast != null)
+             {
+                 ModifyArticle ModifyArticle = new ModifyArticle();
+                 ModifyArticle.ShowDialog(this);
+             }*/
+
+           // ModifyArticle ModifyArticle = new ModifyArticle();
+           // ModifyArticle.ShowDialog(this);
+            //ModifyArticle.GetArticleToModify(IndexOf(Article));
 
         }
 
+  
+       
         //just test
         private void Btn_UpdataListView_Click(object sender, EventArgs e)
         {
@@ -158,28 +179,45 @@ namespace Mercure
         {
             AddArticle Add_Article = new AddArticle();
             Add_Article.ShowDialog(this);
-            //TODO : update list view
+
+            if (Add_Article.DialogResult == DialogResult.OK)
+            {
+                listView_ShowBD_DataBinding();
+            }
+
         }
 
         private void ajouterToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             AddFamille Add_Famille = new AddFamille();
             Add_Famille.ShowDialog(this);
-            //TODO : update list view
+
+            if (Add_Famille.DialogResult == DialogResult.OK)
+            {
+                listView_ShowBD_DataBinding();
+            }
         }
 
         private void ajouterToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             AddSousFamille Add_Sous_Famille = new AddSousFamille();
             Add_Sous_Famille.ShowDialog(this);
-            //TODO : update list view
+
+            if (Add_Sous_Famille.DialogResult == DialogResult.OK)
+            {
+                listView_ShowBD_DataBinding();
+            }
         }
 
         private void ajouterToolStripMenuItem3_Click(object sender, EventArgs e)
         {
             AddMarque Add_Marque = new AddMarque();
             Add_Marque.ShowDialog(this);
-            //TODO : update list view
+
+            if (Add_Marque.DialogResult == DialogResult.OK)
+            {
+                listView_ShowBD_DataBinding();
+            }
         }
 
         private void afficherToolStripMenuItem_Click(object sender, EventArgs e)
@@ -199,7 +237,36 @@ namespace Mercure
             DisplayMarque Display_Marques = new DisplayMarque();
             Display_Marques.ShowDialog(this);
         }
+        /*
+        private void ListView_ShowDB_ItemActivate(object sender, System.EventArgs e)
+        {
+            ListView lv = (ListView)sender;
+            string filename = lv.SelectedItems[0].Tag.ToString();
+            if (lv.SelectedItems[0].ImageIndex == 0)//如果是文件夹，就打开它
+            {
 
-        
+            }
+            else
+            {
+                System.Diagnostics.Process.Start(filename);
+            }
+        }*/
+
+        private void ListView_Show_DB_DoubleClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = listView_ShowBD.HitTest(e.X, e.Y);
+            if (info.Item != null)
+            {
+                ModifyArticle ModifyArticle = new ModifyArticle();
+                ModifyArticle.ShowDialog(this);
+            }
+
+
+
+         //       if (listView_ShowBD.SelectedItems.Count == 0) return;
+
+         //   MessageBox.Show(listView_ShowBD.SelectedItems[0].Text);
+        }
+
     }
 }

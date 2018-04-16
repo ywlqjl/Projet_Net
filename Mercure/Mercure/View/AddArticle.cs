@@ -87,7 +87,9 @@ namespace Mercure.View
                         return;
                     }
 
+                    this.DialogResult = DialogResult.OK;
                     this.Dispose();
+
                 }
                 catch (FormatException e1)
                 {

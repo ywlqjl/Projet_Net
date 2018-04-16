@@ -73,7 +73,7 @@ namespace Mercure.View
                         MessageBox.Show("Sub Familly exists already in database", "Error Add Sub Familly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    
+                    this.DialogResult = DialogResult.OK;
                     this.Dispose();
                 }
                 catch (FormatException e1)
