@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Mercure.Controller;
+using Mercure.Model;
 
 namespace Mercure.View
 {
@@ -15,6 +17,25 @@ namespace Mercure.View
         public DisplayFamille()
         {
             InitializeComponent();
+            LoadFamillies();
+        }
+
+        private void LoadFamillies()
+        {
+            this.familleListView.Items.Clear();
+
+            FamillyController Familly_Controller = new FamillyController();
+            List<Familly> List_Familly = Familly_Controller.GetAllFamilly();
+
+            foreach(Familly Familly in List_Familly)
+            {
+                ListViewItem refItem = new ListViewItem(Convert.ToString(Familly.RefFamille1));
+                ListViewItem.ListViewSubItem nomItem = new ListViewItem.ListViewSubItem(refItem, Familly.Nom1);
+
+                refItem.SubItems.Add(nomItem);
+                familleListView.Items.Add(refItem);
+            }
+
         }
     }
 }
