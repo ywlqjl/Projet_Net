@@ -66,7 +66,7 @@ namespace Mercure.Dao
                     new SQLiteParameter("@RefSubF",Article.RefSubFamilly1.RefSousFamille1),
                     new SQLiteParameter("@RefM",Article.RefMark1.RefMarque1),
                     new SQLiteParameter("@Price",Article.PriceHT1),
-                    new SQLiteParameter("@Quantity",1),
+                    new SQLiteParameter("@Quantity",Article.Quantity1),
                 });
 
                 }
