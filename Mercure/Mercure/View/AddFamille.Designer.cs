@@ -49,7 +49,7 @@
             this.groupBox2.Size = new System.Drawing.Size(306, 88);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Add Famille";
+            this.groupBox2.Text = "Add Familly";
             // 
             // Text_Box_Name
             // 
@@ -70,9 +70,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(24, 63);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Nom  :";
+            this.label3.Text = "Name  :";
             // 
             // label2
             // 

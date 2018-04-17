@@ -31,6 +31,7 @@ namespace Mercure.Controller
                 Art.RefArticle1 = OriArc.RefArticle1;
                 Art.Description1 = OriArc.Description1;
                 Art.PriceHT1 = float.Parse(OriArc.PrixHT1.Replace(',','.'));
+                //try catch here
 
                 // set mark
                 Mark Mark = new Mark();

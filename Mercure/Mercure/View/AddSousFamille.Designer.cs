@@ -53,7 +53,7 @@
             this.groupBox1.Size = new System.Drawing.Size(325, 111);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add Sous Famille";
+            this.groupBox1.Text = "Add Sub Familly";
             // 
             // Combo_Box_Famille
             // 
@@ -75,18 +75,18 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(24, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Famille : ";
+            this.label3.Text = "Familly : ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(24, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Nom : ";
+            this.label2.Text = "Name : ";
             // 
             // label1
             // 

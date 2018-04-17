@@ -79,9 +79,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(19, 162);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 15;
-            this.label3.Text = "Quantité : ";
+            this.label3.Text = "Quantity : ";
             // 
             // Text_Box_Price
             // 
@@ -125,27 +125,27 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(20, 132);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
+            this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Prix  :";
+            this.label6.Text = "Price  :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(23, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Marque : ";
+            this.label5.Text = "Brand : ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(20, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 13);
+            this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Sous-Famille : ";
+            this.label4.Text = "Sub Familly : ";
             // 
             // label2
             // 
