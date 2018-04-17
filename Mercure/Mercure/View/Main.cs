@@ -308,11 +308,26 @@ namespace Mercure
 
         private void DeleteArticleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(SelectedArticle.Text);
-            Response Response = ArticleController.DeleteArticle(SelectedArticle.Text);
-            if (Response.State1)
+            if (SelectedArticle != null)
             {
-                listView_ShowBD_DataBinding();
+                Response Response = ArticleController.DeleteArticle(SelectedArticle.Text);
+                if (Response.State1)
+                {
+                    listView_ShowBD_DataBinding();
+                }
+            }
+
+        }
+
+        private void Btn_DeleteArticle_Click(object sender, EventArgs e)
+        {
+            if (SelectedArticle != null)
+            {
+                Response Response = ArticleController.DeleteArticle(SelectedArticle.Text);
+                if (Response.State1)
+                {
+                    listView_ShowBD_DataBinding();
+                }
             }
         }
     }

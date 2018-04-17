@@ -270,9 +270,9 @@
             this.Btn_UpdateListView.Name = "Btn_UpdateListView";
             this.Btn_UpdateListView.Size = new System.Drawing.Size(63, 23);
             this.Btn_UpdateListView.TabIndex = 3;
-            this.Btn_UpdateListView.Text = "Update";
+            this.Btn_UpdateListView.Text = "Delete";
             this.Btn_UpdateListView.UseVisualStyleBackColor = true;
-            this.Btn_UpdateListView.Click += new System.EventHandler(this.Btn_UpdataListView_Click);
+            this.Btn_UpdateListView.Click += new System.EventHandler(this.Btn_DeleteArticle_Click);
             // 
             // Label_TotalCount
             // 
@@ -290,7 +290,7 @@
             this.ModifyArticleToolStripMenuItem,
             this.DeleteArticleToolStripMenuItem});
             this.Strip.Name = "Strip";
-            this.Strip.Size = new System.Drawing.Size(158, 92);
+            this.Strip.Size = new System.Drawing.Size(158, 70);
             // 
             // AddArticleToolStripMenuItem
             // 
