@@ -21,7 +21,8 @@ namespace Mercure
         List<Article> ListArticle = new List<Article>();
         private System.Collections.Specialized.StringCollection colstr = new System.Collections.Specialized.StringCollection();
         public static ListViewItem SelectedArticle;
-     
+        private ArticleController ArticleController = new ArticleController();
+
 
         //For Sorting List View
         private int sortColumn = -1;
@@ -79,7 +80,7 @@ namespace Mercure
         private void listView_ShowBD_DataBinding()
         {
            
-            ArticleController ArticleController = new ArticleController();
+           
 
             ListArticle = ArticleController.GetAllArticle();
             listView_ShowBD.Items.Clear();
@@ -270,5 +271,49 @@ namespace Mercure
             }
         }
 
+        private void OnRightClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = listView_ShowBD.HitTest(e.X, e.Y);
+            SelectedArticle = info.Item;
+            if (e.Button == MouseButtons.Right)
+            {
+                Strip.Show(this.listView_ShowBD, e.Location);
+            }
+            //Strip.Click
+        }
+
+        private void AddArticleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddArticle Add_Article = new AddArticle();
+            Add_Article.ShowDialog(this);
+
+            if (Add_Article.DialogResult == DialogResult.OK)
+            {
+                listView_ShowBD_DataBinding();
+            }
+        }
+
+        private void ModifyArticleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SelectedArticle!= null)
+            {
+                ModifyArticle ModifyArticle = new ModifyArticle();
+                ModifyArticle.GetArticleToModify(SelectedArticle);
+                ModifyArticle.GetArticleToModify2(SelectedArticle);
+
+                ModifyArticle.ShowDialog(this);
+
+            }
+        }
+
+        private void DeleteArticleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(SelectedArticle.Text);
+            Response Response = ArticleController.DeleteArticle(SelectedArticle.Text);
+            if (Response.State1)
+            {
+                listView_ShowBD_DataBinding();
+            }
+        }
     }
 }
