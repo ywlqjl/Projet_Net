@@ -20,7 +20,7 @@ namespace Mercure
         // arrtibuts
         List<Article> ListArticle = new List<Article>();
         private System.Collections.Specialized.StringCollection colstr = new System.Collections.Specialized.StringCollection();
-        
+        public static ListViewItem SelectedArticle;
      
 
         //For Sorting List View
@@ -32,7 +32,11 @@ namespace Mercure
             listView_ShowBD_DataBinding();
             //this.listView_ShowBD.ItemActivate += new EventHandler(listView_ShowBD.item); 
         }
-
+        /// <summary>
+        /// OpenFile window to load files
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFile Openfile = new OpenFile();
@@ -46,7 +50,10 @@ namespace Mercure
             }
 
         }
-
+        /// <summary>
+        /// Create ListViewItems
+        /// </summary>
+        /// <returns></returns>
         private ListViewItem[] MakeListItem()
         {
             ListViewItem[] L_Item = new ListViewItem[ListArticle.Count];
@@ -66,7 +73,9 @@ namespace Mercure
             }
             return L_Item;
         }
-
+        /// <summary>
+        /// Bind listview of main window
+        /// </summary>
         private void listView_ShowBD_DataBinding()
         {
            
@@ -80,19 +89,21 @@ namespace Mercure
 
         private void listView_ShowBD_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //ListView.SelectedListViewItemCollection Article = this.listView_ShowBD.SelectedItems;
-            
+           // ListView.SelectedListViewItemCollection MultiArticles = this.listView_ShowBD.SelectedItems;
 
+            //Article SelectedArticle = MultiArticles[0];
+            //if (MultiArticles != null)
+            //{
+            //    ModifyArticle ModifyArticle = new ModifyArticle();
+            //    ModifyArticle.ShowDialog(this);
+                //SelectedRefArticle = int.Parse(MultiArticles[0].ToString());
+                //this.listView_ShowBD.TopItem = MultiArticles[0];
+                //listView_ShowBD.TopItem.ForeColor = Color.Red;
+                //Console.WriteLine(SelectedRefArticle);
+            //}
 
-            //ListViewHitTestInfo info = listView_ShowBD.HitTest(e.X, e.Y);
-            /* if (breakfast != null)
-             {
-                 ModifyArticle ModifyArticle = new ModifyArticle();
-                 ModifyArticle.ShowDialog(this);
-             }*/
-
-           // ModifyArticle ModifyArticle = new ModifyArticle();
-           // ModifyArticle.ShowDialog(this);
+            // ModifyArticle ModifyArticle = new ModifyArticle();
+            // ModifyArticle.ShowDialog(this);
             //ModifyArticle.GetArticleToModify(IndexOf(Article));
 
         }
@@ -237,35 +248,26 @@ namespace Mercure
             DisplayMarque Display_Marques = new DisplayMarque();
             Display_Marques.ShowDialog(this);
         }
-        /*
-        private void ListView_ShowDB_ItemActivate(object sender, System.EventArgs e)
-        {
-            ListView lv = (ListView)sender;
-            string filename = lv.SelectedItems[0].Tag.ToString();
-            if (lv.SelectedItems[0].ImageIndex == 0)//如果是文件夹，就打开它
-            {
 
-            }
-            else
-            {
-                System.Diagnostics.Process.Start(filename);
-            }
-        }*/
-
-        private void ListView_Show_DB_DoubleClick(object sender, MouseEventArgs e)
+        /// <summary>
+        /// Double click to modify a selected article in listview of Main window.
+        /// </summary>
+        /// <param name="sender">action</param>
+        /// <param name="e">mosue position</param>
+        private void listView_ShowBD_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             ListViewHitTestInfo info = listView_ShowBD.HitTest(e.X, e.Y);
+            SelectedArticle = info.Item;
+            Console.WriteLine(SelectedArticle.Text);
             if (info.Item != null)
             {
                 ModifyArticle ModifyArticle = new ModifyArticle();
+                ModifyArticle.GetArticleToModify(SelectedArticle);
+                ModifyArticle.GetArticleToModify2(SelectedArticle);
+
                 ModifyArticle.ShowDialog(this);
+               
             }
-
-
-
-         //       if (listView_ShowBD.SelectedItems.Count == 0) return;
-
-         //   MessageBox.Show(listView_ShowBD.SelectedItems[0].Text);
         }
 
     }

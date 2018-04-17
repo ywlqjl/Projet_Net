@@ -209,6 +209,7 @@
             this.PriceHT,
             this.Quantity});
             this.listView_ShowBD.Location = new System.Drawing.Point(66, 78);
+            this.listView_ShowBD.MultiSelect = false;
             this.listView_ShowBD.Name = "listView_ShowBD";
             this.listView_ShowBD.Size = new System.Drawing.Size(1104, 400);
             this.listView_ShowBD.TabIndex = 2;
@@ -216,7 +217,7 @@
             this.listView_ShowBD.View = System.Windows.Forms.View.Details;
             this.listView_ShowBD.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.ColumnClickFunction);
             this.listView_ShowBD.SelectedIndexChanged += new System.EventHandler(this.listView_ShowBD_SelectedIndexChanged);
-            this.listView_ShowBD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListView_Show_DB_DoubleClick);
+            this.listView_ShowBD.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView_ShowBD_MouseDoubleClick);
             // 
             // RefArticle
             // 
