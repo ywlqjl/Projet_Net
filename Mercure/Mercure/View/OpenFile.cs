@@ -93,10 +93,11 @@ namespace Mercure
                 Txt_FilePath.Text = FileName;
               
 
-                // read file
-                ReadFile.LoadFile(FileNameForLoadFile);
+               
                 try
                 {
+                    // read file
+                    ReadFile.LoadFile(FileNameForLoadFile);
                     List<OriArticle> L_OriArt = ReadFile.GetInfoArticleList();
                     // parse file
                     Parse_Article = new ParseArticles(L_OriArt);
@@ -159,8 +160,8 @@ namespace Mercure
             }
             else {
                 // error no file
-                //this.textBox_ShowDetails.AppendText("No file to import!\n");
-                this.label_ShowProgressState.Text = "No file to import!";
+                this.textBox_ShowDetails.AppendText("No file to import!\n");
+                //this.textBox_ShowDetails.Text = "No file to import!";
             }
            
         }

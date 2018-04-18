@@ -17,7 +17,6 @@ namespace Mercure
 
             xf= new XmlDocument();
             xf.Load(filename);
-            
 
         }
 
