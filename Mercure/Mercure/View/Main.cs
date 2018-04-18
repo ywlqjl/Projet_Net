@@ -119,6 +119,7 @@ namespace Mercure
             if (Column == 2 || Column==3)
             {
                 this.listView_ShowBD.Items.Clear();
+                this.listView_ShowBD.Groups.Clear();
                 // sub familly
                 List<string> GroupString = new List<string>();
                 List<ListViewGroup> GroupList = new List<ListViewGroup>();
