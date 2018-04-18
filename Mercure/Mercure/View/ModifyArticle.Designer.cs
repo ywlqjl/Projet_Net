@@ -30,26 +30,23 @@
         {
             this.Btn_SubmitModifyArticle = new System.Windows.Forms.Button();
             this.Btn_CancelModifyArticle = new System.Windows.Forms.Button();
-            this.listView_ModifyArticle = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label_RefArticle = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox_RefArticle = new System.Windows.Forms.TextBox();
+            this.textBox_Description = new System.Windows.Forms.TextBox();
+            this.textBox_PriceHT = new System.Windows.Forms.TextBox();
+            this.textBox_Quantity = new System.Windows.Forms.TextBox();
+            this.comboBox_SubFamily = new System.Windows.Forms.ComboBox();
+            this.comboBox_Brand = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Btn_SubmitModifyArticle
             // 
-            this.Btn_SubmitModifyArticle.Location = new System.Drawing.Point(782, 224);
+            this.Btn_SubmitModifyArticle.Location = new System.Drawing.Point(913, 141);
             this.Btn_SubmitModifyArticle.Name = "Btn_SubmitModifyArticle";
             this.Btn_SubmitModifyArticle.Size = new System.Drawing.Size(113, 46);
             this.Btn_SubmitModifyArticle.TabIndex = 1;
@@ -59,7 +56,7 @@
             // 
             // Btn_CancelModifyArticle
             // 
-            this.Btn_CancelModifyArticle.Location = new System.Drawing.Point(915, 224);
+            this.Btn_CancelModifyArticle.Location = new System.Drawing.Point(1046, 141);
             this.Btn_CancelModifyArticle.Name = "Btn_CancelModifyArticle";
             this.Btn_CancelModifyArticle.Size = new System.Drawing.Size(113, 46);
             this.Btn_CancelModifyArticle.TabIndex = 2;
@@ -67,139 +64,159 @@
             this.Btn_CancelModifyArticle.UseVisualStyleBackColor = true;
             this.Btn_CancelModifyArticle.Click += new System.EventHandler(this.Btn_CancelModifyArticle_Click);
             // 
-            // listView_ModifyArticle
+            // label_RefArticle
             // 
-            this.listView_ModifyArticle.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.listView_ModifyArticle.LabelEdit = true;
-            this.listView_ModifyArticle.Location = new System.Drawing.Point(23, 35);
-            this.listView_ModifyArticle.Name = "listView_ModifyArticle";
-            this.listView_ModifyArticle.Size = new System.Drawing.Size(1005, 141);
-            this.listView_ModifyArticle.TabIndex = 3;
-            this.listView_ModifyArticle.UseCompatibleStateImageBehavior = false;
-            this.listView_ModifyArticle.View = System.Windows.Forms.View.Details;
-            this.listView_ModifyArticle.SelectedIndexChanged += new System.EventHandler(this.listView_ModifyArticle_SelectedIndexChanged);
+            this.label_RefArticle.AutoSize = true;
+            this.label_RefArticle.Location = new System.Drawing.Point(90, 41);
+            this.label_RefArticle.Name = "label_RefArticle";
+            this.label_RefArticle.Size = new System.Drawing.Size(98, 18);
+            this.label_RefArticle.TabIndex = 5;
+            this.label_RefArticle.Text = "RefArticle";
             // 
-            // columnHeader1
+            // label1
             // 
-            this.columnHeader1.Text = "RefArticle";
-            this.columnHeader1.Width = 100;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(241, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 18);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Description";
             // 
-            // columnHeader2
+            // label2
             // 
-            this.columnHeader2.Text = "Description";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 161;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(521, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 18);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "SubFamily";
             // 
-            // columnHeader3
+            // label3
             // 
-            this.columnHeader3.Text = "SubFamily";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 91;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(780, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 18);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Brand";
             // 
-            // columnHeader4
+            // label4
             // 
-            this.columnHeader4.Text = "Brand";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 133;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(946, 41);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(71, 18);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "PriceHT";
             // 
-            // columnHeader5
+            // label5
             // 
-            this.columnHeader5.Text = "PriceHT";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 132;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(1065, 41);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 18);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Quantity";
             // 
-            // columnHeader6
+            // textBox_RefArticle
             // 
-            this.columnHeader6.Text = "Quantity";
-            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader6.Width = 151;
+            this.textBox_RefArticle.Enabled = false;
+            this.textBox_RefArticle.Font = new System.Drawing.Font("SimSun", 9F);
+            this.textBox_RefArticle.Location = new System.Drawing.Point(62, 76);
+            this.textBox_RefArticle.Name = "textBox_RefArticle";
+            this.textBox_RefArticle.Size = new System.Drawing.Size(141, 28);
+            this.textBox_RefArticle.TabIndex = 11;
+            this.textBox_RefArticle.TextChanged += new System.EventHandler(this.textBox_RefArticle_TextChanged);
             // 
-            // dataGridView1
+            // textBox_Description
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(60, 295);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(927, 70);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.textBox_Description.Font = new System.Drawing.Font("SimSun", 9F);
+            this.textBox_Description.Location = new System.Drawing.Point(209, 75);
+            this.textBox_Description.Name = "textBox_Description";
+            this.textBox_Description.Size = new System.Drawing.Size(187, 28);
+            this.textBox_Description.TabIndex = 12;
+            this.textBox_Description.TextChanged += new System.EventHandler(this.textBox_Description_TextChanged);
             // 
-            // Column1
+            // textBox_PriceHT
             // 
-            this.Column1.HeaderText = "RefArticle";
-            this.Column1.Name = "Column1";
+            this.textBox_PriceHT.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_PriceHT.Location = new System.Drawing.Point(922, 75);
+            this.textBox_PriceHT.Name = "textBox_PriceHT";
+            this.textBox_PriceHT.Size = new System.Drawing.Size(115, 28);
+            this.textBox_PriceHT.TabIndex = 15;
+            this.textBox_PriceHT.TextChanged += new System.EventHandler(this.textBox_PriceHT_TextChanged);
             // 
-            // Column2
+            // textBox_Quantity
             // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Description";
-            this.Column2.Name = "Column2";
+            this.textBox_Quantity.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_Quantity.Location = new System.Drawing.Point(1043, 75);
+            this.textBox_Quantity.Name = "textBox_Quantity";
+            this.textBox_Quantity.Size = new System.Drawing.Size(115, 28);
+            this.textBox_Quantity.TabIndex = 16;
+            this.textBox_Quantity.TextChanged += new System.EventHandler(this.textBox_Quantity_TextChanged);
             // 
-            // Column3
+            // comboBox_SubFamily
             // 
-            this.Column3.HeaderText = "SubFamily";
-            this.Column3.Name = "Column3";
+            this.comboBox_SubFamily.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox_SubFamily.FormattingEnabled = true;
+            this.comboBox_SubFamily.Location = new System.Drawing.Point(402, 76);
+            this.comboBox_SubFamily.Name = "comboBox_SubFamily";
+            this.comboBox_SubFamily.Size = new System.Drawing.Size(338, 26);
+            this.comboBox_SubFamily.TabIndex = 17;
+            this.comboBox_SubFamily.SelectedIndexChanged += new System.EventHandler(this.comboBox_SubFamily_SelectedIndexChanged);
             // 
-            // Column4
+            // comboBox_Brand
             // 
-            this.Column4.HeaderText = "Brand";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "PriceHT";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Quantity";
-            this.Column6.Name = "Column6";
+            this.comboBox_Brand.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox_Brand.FormattingEnabled = true;
+            this.comboBox_Brand.Location = new System.Drawing.Point(746, 77);
+            this.comboBox_Brand.Name = "comboBox_Brand";
+            this.comboBox_Brand.Size = new System.Drawing.Size(170, 26);
+            this.comboBox_Brand.TabIndex = 18;
+            this.comboBox_Brand.SelectedIndexChanged += new System.EventHandler(this.comboBox_Brand_SelectedIndexChanged);
             // 
             // ModifyArticle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 521);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.listView_ModifyArticle);
+            this.ClientSize = new System.Drawing.Size(1278, 224);
+            this.Controls.Add(this.comboBox_Brand);
+            this.Controls.Add(this.comboBox_SubFamily);
+            this.Controls.Add(this.textBox_Quantity);
+            this.Controls.Add(this.textBox_PriceHT);
+            this.Controls.Add(this.textBox_Description);
+            this.Controls.Add(this.textBox_RefArticle);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_RefArticle);
             this.Controls.Add(this.Btn_CancelModifyArticle);
             this.Controls.Add(this.Btn_SubmitModifyArticle);
+            this.MaximumSize = new System.Drawing.Size(1300, 280);
+            this.MinimumSize = new System.Drawing.Size(1300, 280);
             this.Name = "ModifyArticle";
             this.Text = "ModifyArticle";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button Btn_SubmitModifyArticle;
         private System.Windows.Forms.Button Btn_CancelModifyArticle;
-        private System.Windows.Forms.ListView listView_ModifyArticle;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Label label_RefArticle;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox_RefArticle;
+        private System.Windows.Forms.TextBox textBox_Description;
+        private System.Windows.Forms.TextBox textBox_PriceHT;
+        private System.Windows.Forms.TextBox textBox_Quantity;
+        private System.Windows.Forms.ComboBox comboBox_SubFamily;
+        private System.Windows.Forms.ComboBox comboBox_Brand;
     }
 }
