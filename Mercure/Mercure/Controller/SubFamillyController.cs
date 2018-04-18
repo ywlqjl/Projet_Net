@@ -92,7 +92,7 @@ namespace Mercure.Controller
             try
             {
                 int Count = 0;
-                SubFamilly SubFamilly = this.SubFamillyDAO.MakeSubFamilly(RefFamilly,RefFamilly, Name);
+                SubFamilly SubFamilly = this.SubFamillyDAO.MakeSubFamilly(RefSubFamilly, RefFamilly, Name);
                 Count = this.SubFamillyDAO.UpdateSubFamilly(SubFamilly);
 
                 Response.State1 = true;
