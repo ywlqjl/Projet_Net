@@ -264,9 +264,8 @@ namespace Mercure
             if (info.Item != null)
             {
                 ModifyArticle ModifyArticle = new ModifyArticle();
-                ModifyArticle.GetArticleToModify3(SelectedArticle);
-                ModifyArticle.GetArticleToModify2(SelectedArticle);
-
+                ModifyArticle.GetArticleToModify(SelectedArticle);
+    
                 ModifyArticle.ShowDialog(this);
                
             }
@@ -299,8 +298,7 @@ namespace Mercure
             if (SelectedArticle!= null)
             {
                 ModifyArticle ModifyArticle = new ModifyArticle();
-                ModifyArticle.GetArticleToModify3(SelectedArticle);
-                ModifyArticle.GetArticleToModify2(SelectedArticle);
+                ModifyArticle.GetArticleToModify(SelectedArticle);
 
                 ModifyArticle.ShowDialog(this);
 

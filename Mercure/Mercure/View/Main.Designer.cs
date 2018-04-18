@@ -216,7 +216,7 @@
             this.listView_ShowBD.Location = new System.Drawing.Point(66, 78);
             this.listView_ShowBD.MultiSelect = false;
             this.listView_ShowBD.Name = "listView_ShowBD";
-            this.listView_ShowBD.Size = new System.Drawing.Size(1104, 400);
+            this.listView_ShowBD.Size = new System.Drawing.Size(1126, 506);
             this.listView_ShowBD.TabIndex = 2;
             this.listView_ShowBD.UseCompatibleStateImageBehavior = false;
             this.listView_ShowBD.View = System.Windows.Forms.View.Details;
@@ -263,7 +263,7 @@
             // Btn_UpdateListView
             // 
             this.Btn_UpdateListView.AutoSize = true;
-            this.Btn_UpdateListView.Location = new System.Drawing.Point(1076, 506);
+            this.Btn_UpdateListView.Location = new System.Drawing.Point(1098, 590);
             this.Btn_UpdateListView.Name = "Btn_UpdateListView";
             this.Btn_UpdateListView.Size = new System.Drawing.Size(94, 34);
             this.Btn_UpdateListView.TabIndex = 3;
@@ -274,7 +274,7 @@
             // Label_TotalCount
             // 
             this.Label_TotalCount.AutoSize = true;
-            this.Label_TotalCount.Location = new System.Drawing.Point(66, 489);
+            this.Label_TotalCount.Location = new System.Drawing.Point(63, 598);
             this.Label_TotalCount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Label_TotalCount.Name = "Label_TotalCount";
             this.Label_TotalCount.Size = new System.Drawing.Size(89, 18);

@@ -30,13 +30,6 @@
         {
             this.Btn_SubmitModifyArticle = new System.Windows.Forms.Button();
             this.Btn_CancelModifyArticle = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label_RefArticle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,7 +42,6 @@
             this.textBox_Quantity = new System.Windows.Forms.TextBox();
             this.comboBox_SubFamily = new System.Windows.Forms.ComboBox();
             this.comboBox_Brand = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Btn_SubmitModifyArticle
@@ -72,54 +64,6 @@
             this.Btn_CancelModifyArticle.UseVisualStyleBackColor = true;
             this.Btn_CancelModifyArticle.Click += new System.EventHandler(this.Btn_CancelModifyArticle_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(62, 217);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(1103, 70);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "RefArticle";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Description";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "SubFamily";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Brand";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "PriceHT";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Quantity";
-            this.Column6.Name = "Column6";
-            // 
             // label_RefArticle
             // 
             this.label_RefArticle.AutoSize = true;
@@ -128,7 +72,6 @@
             this.label_RefArticle.Size = new System.Drawing.Size(98, 18);
             this.label_RefArticle.TabIndex = 5;
             this.label_RefArticle.Text = "RefArticle";
-            this.label_RefArticle.Click += new System.EventHandler(this.label1_Click);
             // 
             // label1
             // 
@@ -177,6 +120,7 @@
             // 
             // textBox_RefArticle
             // 
+            this.textBox_RefArticle.Enabled = false;
             this.textBox_RefArticle.Font = new System.Drawing.Font("SimSun", 9F);
             this.textBox_RefArticle.Location = new System.Drawing.Point(62, 76);
             this.textBox_RefArticle.Name = "textBox_RefArticle";
@@ -191,6 +135,7 @@
             this.textBox_Description.Name = "textBox_Description";
             this.textBox_Description.Size = new System.Drawing.Size(187, 28);
             this.textBox_Description.TabIndex = 12;
+            this.textBox_Description.TextChanged += new System.EventHandler(this.textBox_Description_TextChanged);
             // 
             // textBox_PriceHT
             // 
@@ -199,6 +144,7 @@
             this.textBox_PriceHT.Name = "textBox_PriceHT";
             this.textBox_PriceHT.Size = new System.Drawing.Size(115, 28);
             this.textBox_PriceHT.TabIndex = 15;
+            this.textBox_PriceHT.TextChanged += new System.EventHandler(this.textBox_PriceHT_TextChanged);
             // 
             // textBox_Quantity
             // 
@@ -207,6 +153,7 @@
             this.textBox_Quantity.Name = "textBox_Quantity";
             this.textBox_Quantity.Size = new System.Drawing.Size(115, 28);
             this.textBox_Quantity.TabIndex = 16;
+            this.textBox_Quantity.TextChanged += new System.EventHandler(this.textBox_Quantity_TextChanged);
             // 
             // comboBox_SubFamily
             // 
@@ -216,6 +163,7 @@
             this.comboBox_SubFamily.Name = "comboBox_SubFamily";
             this.comboBox_SubFamily.Size = new System.Drawing.Size(338, 26);
             this.comboBox_SubFamily.TabIndex = 17;
+            this.comboBox_SubFamily.SelectedIndexChanged += new System.EventHandler(this.comboBox_SubFamily_SelectedIndexChanged);
             // 
             // comboBox_Brand
             // 
@@ -225,12 +173,13 @@
             this.comboBox_Brand.Name = "comboBox_Brand";
             this.comboBox_Brand.Size = new System.Drawing.Size(170, 26);
             this.comboBox_Brand.TabIndex = 18;
+            this.comboBox_Brand.SelectedIndexChanged += new System.EventHandler(this.comboBox_Brand_SelectedIndexChanged);
             // 
             // ModifyArticle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 344);
+            this.ClientSize = new System.Drawing.Size(1278, 224);
             this.Controls.Add(this.comboBox_Brand);
             this.Controls.Add(this.comboBox_SubFamily);
             this.Controls.Add(this.textBox_Quantity);
@@ -243,14 +192,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label_RefArticle);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Btn_CancelModifyArticle);
             this.Controls.Add(this.Btn_SubmitModifyArticle);
-            this.MaximumSize = new System.Drawing.Size(1300, 400);
-            this.MinimumSize = new System.Drawing.Size(1300, 400);
+            this.MaximumSize = new System.Drawing.Size(1300, 280);
+            this.MinimumSize = new System.Drawing.Size(1300, 280);
             this.Name = "ModifyArticle";
             this.Text = "ModifyArticle";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,13 +206,6 @@
         #endregion
         private System.Windows.Forms.Button Btn_SubmitModifyArticle;
         private System.Windows.Forms.Button Btn_CancelModifyArticle;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Label label_RefArticle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
