@@ -26,8 +26,12 @@ namespace Mercure
 
         static public List<OriArticle> GetInfoArticleList()
         {
+            
             XmlNodeList ArticleNodes = xf.SelectNodes("//article");
-
+            if (ArticleNodes.Count == 0)
+            {
+                throw new System.FormatException("File format incorrect!");
+            }
             List<OriArticle> ArticleList = new List<OriArticle>();
             foreach (XmlNode article in ArticleNodes)
             {

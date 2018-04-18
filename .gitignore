@@ -2,5 +2,10 @@
 Mercure/Mercure/bin/Debug/Mercure\.vshost\.exe\.manifest
 
 *.exe
+Mercure/Mercure/bin/Debug/Mercure.pdb
+*.pdb
+Mercure/Mercure/bin/Debug/Mercure.SQLite
+Mercure/Mercure/obj/Debug/Mercure.csproj.GenerateResource.Cache
+*.exe
 
 Mercure/\.vs/Mercure/v14/\.suo

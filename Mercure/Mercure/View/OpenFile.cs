@@ -77,6 +77,11 @@ namespace Mercure
           
         }
 
+        /// <summary>
+        /// Select file btn, load file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Select_btn_Click(object sender, EventArgs e)
         {
             openFileDialog.Title = "Select File";
@@ -86,26 +91,34 @@ namespace Mercure
                 FileNameForLoadFile = openFileDialog.FileName;
                 string FileName = System.IO.Path.GetFullPath(openFileDialog.FileName);
                 Txt_FilePath.Text = FileName;
-                Console.WriteLine(FileName);
+              
 
                 // read file
                 ReadFile.LoadFile(FileNameForLoadFile);
-                List<OriArticle> L_OriArt = ReadFile.GetInfoArticleList();
+                try
+                {
+                    List<OriArticle> L_OriArt = ReadFile.GetInfoArticleList();
+                    // parse file
+                    Parse_Article = new ParseArticles(L_OriArt);
+                    L_Art = Parse_Article.ParseArticle();
 
-                // parse file
-                Parse_Article = new ParseArticles(L_OriArt);
-                L_Art = Parse_Article.ParseArticle();
-
-                TotalData = Parse_Article.L_Familly1.Count + Parse_Article.L_Mark1.Count + Parse_Article.L_SubFamilly1.Count;
-                Console.WriteLine(TotalData);
+                    TotalData = Parse_Article.L_Familly1.Count + Parse_Article.L_Mark1.Count + Parse_Article.L_SubFamilly1.Count;
+                    Console.WriteLine(TotalData);
+                }
+                catch (Exception E)
+                {
+                    this.textBox_ShowDetails.Clear();
+                    this.textBox_ShowDetails.AppendText(E.Message);
+                }
+               
             }
         }
 
-        private void openFileDialog_FileOk(object sender, CancelEventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Add new file to database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_addNew_Click(object sender, EventArgs e)
         {
             this.textBox_ShowDetails.Clear();
@@ -152,16 +165,22 @@ namespace Mercure
            
         }
 
-        /*
-         * close the window of Openfile after loading operations.
-         * 
-         */
+        /// <summary>
+        /// Close
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Close_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
+        /// <summary>
+        /// update data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Update_Click(object sender, EventArgs e)
         {
             this.textBox_ShowDetails.Clear();
@@ -198,6 +217,11 @@ namespace Mercure
             }
         }
 
+        /// <summary>
+        /// cancel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_CancelLoad_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you want to cancel?", "Stop", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)

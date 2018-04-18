@@ -91,23 +91,7 @@ namespace Mercure
 
         private void listView_ShowBD_SelectedIndexChanged(object sender, EventArgs e)
         {
-           // ListView.SelectedListViewItemCollection MultiArticles = this.listView_ShowBD.SelectedItems;
-
-            //Article SelectedArticle = MultiArticles[0];
-            //if (MultiArticles != null)
-            //{
-            //    ModifyArticle ModifyArticle = new ModifyArticle();
-            //    ModifyArticle.ShowDialog(this);
-                //SelectedRefArticle = int.Parse(MultiArticles[0].ToString());
-                //this.listView_ShowBD.TopItem = MultiArticles[0];
-                //listView_ShowBD.TopItem.ForeColor = Color.Red;
-                //Console.WriteLine(SelectedRefArticle);
-            //}
-
-            // ModifyArticle ModifyArticle = new ModifyArticle();
-            // ModifyArticle.ShowDialog(this);
-            //ModifyArticle.GetArticleToModify(IndexOf(Article));
-
+            
         }
 
   
@@ -267,6 +251,7 @@ namespace Mercure
                 ModifyArticle.GetArticleToModify(SelectedArticle);
     
                 ModifyArticle.ShowDialog(this);
+                this.listView_ShowBD_DataBinding();
                
             }
         }
