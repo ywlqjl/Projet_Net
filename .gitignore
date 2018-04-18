@@ -7,3 +7,5 @@ Mercure/Mercure/bin/Debug/Mercure.pdb
 Mercure/Mercure/bin/Debug/Mercure.SQLite
 Mercure/Mercure/obj/Debug/Mercure.csproj.GenerateResource.Cache
 *.exe
+*.exe
+*.pdb

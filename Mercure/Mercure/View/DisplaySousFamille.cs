@@ -20,6 +20,9 @@ namespace Mercure.View
             LoadSubFamillies();
         }
 
+        /// <summary>
+        /// load sub familly
+        /// </summary>
         private void LoadSubFamillies()
         {
             this.List_View_Sous_Famille.Items.Clear();
@@ -35,7 +38,7 @@ namespace Mercure.View
                 Item.SubItems.Add(Name_Item);
 
                 FamillyController Familly_Controller = new FamillyController();
-                Familly Familly = Familly_Controller.GetFamillyByRef(SubFamilly.RefSousFamille1);
+                Familly Familly = Familly_Controller.GetFamillyByRef(SubFamilly.RefFamille1.RefFamille1);
 
                 ListViewItem.ListViewSubItem familly_Item = new ListViewItem.ListViewSubItem(Item, Familly != null ? Familly.Nom1 : "");
                 Item.SubItems.Add(familly_Item);

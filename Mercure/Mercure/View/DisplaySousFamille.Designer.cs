@@ -43,9 +43,9 @@
             this.Column_Famille});
             this.List_View_Sous_Famille.FullRowSelect = true;
             this.List_View_Sous_Famille.GridLines = true;
-            this.List_View_Sous_Famille.Location = new System.Drawing.Point(12, 12);
+            this.List_View_Sous_Famille.Location = new System.Drawing.Point(12, 11);
             this.List_View_Sous_Famille.Name = "List_View_Sous_Famille";
-            this.List_View_Sous_Famille.Size = new System.Drawing.Size(414, 416);
+            this.List_View_Sous_Famille.Size = new System.Drawing.Size(414, 384);
             this.List_View_Sous_Famille.TabIndex = 1;
             this.List_View_Sous_Famille.UseCompatibleStateImageBehavior = false;
             this.List_View_Sous_Famille.View = System.Windows.Forms.View.Details;
@@ -67,9 +67,9 @@
             // 
             // DisplaySousFamille
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(438, 435);
+            this.ClientSize = new System.Drawing.Size(438, 402);
             this.Controls.Add(this.List_View_Sous_Famille);
             this.Name = "DisplaySousFamille";
             this.Text = "DisplaySousFamille";

@@ -167,5 +167,25 @@ namespace Mercure.Dao
             }
             return L_SubFamilly;
         }
+
+        /// <summary>
+        /// get max sub familly id
+        /// </summary>
+        /// <returns></returns>
+        public int GetMaxSubFamillyId()
+        {
+            SQLiteCommand SelectCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                SelectCommand.CommandText = "SELECT MAX(RefSousFamille) FROM SousFamilles";
+                SQLiteDataReader reader = SelectCommand.ExecuteReader();
+                Tran.Commit();
+                if (reader.Read())
+                {
+                    return int.Parse(reader[0].ToString());
+                }
+            }
+            return 0;
+        }
     }
 }

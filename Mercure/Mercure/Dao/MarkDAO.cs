@@ -156,5 +156,25 @@ namespace Mercure.Dao
             }
             return L_Mark;
         }
+
+        /// <summary>
+        /// get max mark id 
+        /// </summary>
+        /// <returns></returns>
+        public int GetMaxMarkId()
+        {
+            SQLiteCommand SelectCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                SelectCommand.CommandText = "SELECT MAX(RefMarque) FROM Marques";
+                SQLiteDataReader reader = SelectCommand.ExecuteReader();
+                Tran.Commit();
+                if (reader.Read())
+                {
+                    return int.Parse(reader[0].ToString());
+                }
+            }
+            return 0;
+        }
     }
 }

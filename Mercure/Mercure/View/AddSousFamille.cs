@@ -24,6 +24,8 @@ namespace Mercure.View
         {
             FamillyController Familly_Controller = new FamillyController();
             List<Familly> List_Familly = Familly_Controller.GetAllFamilly();
+            SubFamillyController Sub_Familly_Controller = new SubFamillyController();
+            Text_Box_Reference.Text = (Sub_Familly_Controller.GetMaxSubFamillyId()+1).ToString();
 
             foreach (Familly Familly in List_Familly)
             {

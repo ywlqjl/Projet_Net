@@ -151,5 +151,14 @@ namespace Mercure.Controller
             return this.MarkDAO.SelectAllMark();
         }
 
+        /// <summary>
+        /// get max mark id
+        /// </summary>
+        /// <returns></returns>
+        public int GetMaxMarkId()
+        {
+            return this.MarkDAO.GetMaxMarkId();
+        }
+
     }
 }

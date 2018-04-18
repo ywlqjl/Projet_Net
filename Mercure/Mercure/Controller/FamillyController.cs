@@ -152,5 +152,15 @@ namespace Mercure.Controller
         {
             return this.FamillyDAO.SelectAllFamilly();
         }
+
+        /// <summary>
+        /// get max id
+        /// </summary>
+        /// <returns>max id</returns>
+        public int GetMaxFamillyId()
+        {
+            return this.FamillyDAO.GetMaxFamillyId();
+
+        }
     }
 }

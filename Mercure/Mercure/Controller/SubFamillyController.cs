@@ -119,7 +119,7 @@ namespace Mercure.Controller
             try
             {
                 int Count = 0;
-                SubFamilly SubFamilly = this.SubFamillyDAO.MakeSubFamilly(RefFamilly, RefFamilly, Name);
+                SubFamilly SubFamilly = this.SubFamillyDAO.MakeSubFamilly(RefSub, RefFamilly, Name);
                 Count = SubFamillyDAO.InsertSubFamilly(SubFamilly);
                 Response.State1 = true;
                 Response.Message1 = Count.ToString();
@@ -149,6 +149,15 @@ namespace Mercure.Controller
         public List<SubFamilly> GetAllSubFamilly()
         {
             return this.SubFamillyDAO.SelectAllSubFamilly();
+        }
+
+        /// <summary>
+        /// get max sub familly id
+        /// </summary>
+        /// <returns></returns>
+        public int GetMaxSubFamillyId()
+        {
+            return this.SubFamillyDAO.GetMaxSubFamillyId();
         }
 
     }

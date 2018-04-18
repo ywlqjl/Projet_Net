@@ -26,13 +26,13 @@ namespace Mercure.Dao
                 SelectCommand.Parameters.AddRange(new[] {
                     new SQLiteParameter("@Ref",Ref)
                 });
-               
+
                 SQLiteDataReader reader = SelectCommand.ExecuteReader();
                 Tran.Commit();
                 if (reader.HasRows)
                 {
                     reader.Read();
-                    Familly = this.MakeFamilly( int.Parse(reader["RefFamille"].ToString()), reader["Nom"].ToString());
+                    Familly = this.MakeFamilly(int.Parse(reader["RefFamille"].ToString()), reader["Nom"].ToString());
                 }
 
 
@@ -46,7 +46,7 @@ namespace Mercure.Dao
             Familly Familly = new Familly();
             Familly.RefFamille1 = RefFamilly;
             Familly.Nom1 = Name;
-            
+
 
             return Familly;
         }
@@ -130,7 +130,7 @@ namespace Mercure.Dao
             using (SQLiteTransaction Tran = Connection.BeginTransaction())
             {
                 InsertCommand.CommandText = "UPDATE Familles SET Nom = @Nom WHERE RefFamille = @Ref";
-                InsertCommand.Parameters.AddRange(new[] {     
+                InsertCommand.Parameters.AddRange(new[] {
                     new SQLiteParameter("@Nom",Familly.Nom1),
                     new SQLiteParameter("@Ref",Familly.RefFamille1),
                 });
@@ -147,7 +147,7 @@ namespace Mercure.Dao
         public List<Familly> SelectAllFamilly()
         {
             List<Familly> L_Familly = new List<Familly>();
-           
+
             SQLiteCommand SelectCommand = new SQLiteCommand(Connection);
             using (SQLiteTransaction Tran = Connection.BeginTransaction())
             {
@@ -161,6 +161,26 @@ namespace Mercure.Dao
                 }
             }
             return L_Familly;
+        }
+
+        /// <summary>
+        /// get max familly id
+        /// </summary>
+        /// <returns></returns>
+        public int GetMaxFamillyId()
+        {
+            SQLiteCommand SelectCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                SelectCommand.CommandText = "SELECT MAX(RefFamille) FROM Familles";
+                SQLiteDataReader reader = SelectCommand.ExecuteReader();
+                Tran.Commit();
+                if (reader.Read())
+                {
+                    return int.Parse(reader[0].ToString());
+                }
+            }
+            return 0;
         }
     }
 }

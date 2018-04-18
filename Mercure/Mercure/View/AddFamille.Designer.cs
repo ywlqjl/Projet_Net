@@ -44,50 +44,51 @@
             this.groupBox2.Controls.Add(this.Text_Box_Reference);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Location = new System.Drawing.Point(12, 11);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(306, 88);
+            this.groupBox2.Size = new System.Drawing.Size(306, 81);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add Familly";
             // 
             // Text_Box_Name
             // 
-            this.Text_Box_Name.Location = new System.Drawing.Point(94, 56);
+            this.Text_Box_Name.Location = new System.Drawing.Point(94, 52);
             this.Text_Box_Name.Name = "Text_Box_Name";
-            this.Text_Box_Name.Size = new System.Drawing.Size(199, 20);
+            this.Text_Box_Name.Size = new System.Drawing.Size(199, 21);
             this.Text_Box_Name.TabIndex = 3;
             // 
             // Text_Box_Reference
             // 
-            this.Text_Box_Reference.Location = new System.Drawing.Point(94, 30);
+            this.Text_Box_Reference.Enabled = false;
+            this.Text_Box_Reference.Location = new System.Drawing.Point(94, 28);
             this.Text_Box_Reference.Name = "Text_Box_Reference";
-            this.Text_Box_Reference.Size = new System.Drawing.Size(199, 20);
+            this.Text_Box_Reference.Size = new System.Drawing.Size(199, 21);
             this.Text_Box_Reference.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 63);
+            this.label3.Location = new System.Drawing.Point(24, 58);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(47, 12);
             this.label3.TabIndex = 1;
             this.label3.Text = "Name  :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 33);
+            this.label2.Location = new System.Drawing.Point(22, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.Size = new System.Drawing.Size(77, 12);
             this.label2.TabIndex = 0;
             this.label2.Text = "Reference  :";
             // 
             // Btn_Cancel_Famille
             // 
-            this.Btn_Cancel_Famille.Location = new System.Drawing.Point(243, 106);
+            this.Btn_Cancel_Famille.Location = new System.Drawing.Point(243, 98);
             this.Btn_Cancel_Famille.Name = "Btn_Cancel_Famille";
-            this.Btn_Cancel_Famille.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Cancel_Famille.Size = new System.Drawing.Size(75, 21);
             this.Btn_Cancel_Famille.TabIndex = 5;
             this.Btn_Cancel_Famille.Text = "Cancel";
             this.Btn_Cancel_Famille.UseVisualStyleBackColor = true;
@@ -95,9 +96,9 @@
             // 
             // Btn_Add_Famille
             // 
-            this.Btn_Add_Famille.Location = new System.Drawing.Point(162, 106);
+            this.Btn_Add_Famille.Location = new System.Drawing.Point(162, 98);
             this.Btn_Add_Famille.Name = "Btn_Add_Famille";
-            this.Btn_Add_Famille.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Add_Famille.Size = new System.Drawing.Size(75, 21);
             this.Btn_Add_Famille.TabIndex = 4;
             this.Btn_Add_Famille.Text = "Add";
             this.Btn_Add_Famille.UseVisualStyleBackColor = true;
@@ -105,9 +106,9 @@
             // 
             // AddFamille
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 137);
+            this.ClientSize = new System.Drawing.Size(327, 126);
             this.Controls.Add(this.Btn_Cancel_Famille);
             this.Controls.Add(this.Btn_Add_Famille);
             this.Controls.Add(this.groupBox2);
