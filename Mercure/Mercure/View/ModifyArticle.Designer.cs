@@ -42,11 +42,13 @@
             this.textBox_Quantity = new System.Windows.Forms.TextBox();
             this.comboBox_SubFamily = new System.Windows.Forms.ComboBox();
             this.comboBox_Brand = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_SubmitModifyArticle
             // 
-            this.Btn_SubmitModifyArticle.Location = new System.Drawing.Point(913, 141);
+            this.Btn_SubmitModifyArticle.Location = new System.Drawing.Point(922, 155);
             this.Btn_SubmitModifyArticle.Name = "Btn_SubmitModifyArticle";
             this.Btn_SubmitModifyArticle.Size = new System.Drawing.Size(113, 46);
             this.Btn_SubmitModifyArticle.TabIndex = 1;
@@ -56,7 +58,7 @@
             // 
             // Btn_CancelModifyArticle
             // 
-            this.Btn_CancelModifyArticle.Location = new System.Drawing.Point(1046, 141);
+            this.Btn_CancelModifyArticle.Location = new System.Drawing.Point(1055, 155);
             this.Btn_CancelModifyArticle.Name = "Btn_CancelModifyArticle";
             this.Btn_CancelModifyArticle.Size = new System.Drawing.Size(113, 46);
             this.Btn_CancelModifyArticle.TabIndex = 2;
@@ -67,7 +69,7 @@
             // label_RefArticle
             // 
             this.label_RefArticle.AutoSize = true;
-            this.label_RefArticle.Location = new System.Drawing.Point(90, 41);
+            this.label_RefArticle.Location = new System.Drawing.Point(56, 49);
             this.label_RefArticle.Name = "label_RefArticle";
             this.label_RefArticle.Size = new System.Drawing.Size(98, 18);
             this.label_RefArticle.TabIndex = 5;
@@ -76,7 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(241, 41);
+            this.label1.Location = new System.Drawing.Point(207, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 18);
             this.label1.TabIndex = 6;
@@ -85,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(521, 41);
+            this.label2.Location = new System.Drawing.Point(487, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 18);
             this.label2.TabIndex = 7;
@@ -94,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(780, 41);
+            this.label3.Location = new System.Drawing.Point(746, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 18);
             this.label3.TabIndex = 8;
@@ -103,7 +105,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(946, 41);
+            this.label4.Location = new System.Drawing.Point(912, 49);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 18);
             this.label4.TabIndex = 9;
@@ -112,7 +114,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1065, 41);
+            this.label5.Location = new System.Drawing.Point(1031, 49);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 18);
             this.label5.TabIndex = 10;
@@ -122,7 +124,7 @@
             // 
             this.textBox_RefArticle.Enabled = false;
             this.textBox_RefArticle.Font = new System.Drawing.Font("SimSun", 9F);
-            this.textBox_RefArticle.Location = new System.Drawing.Point(62, 76);
+            this.textBox_RefArticle.Location = new System.Drawing.Point(28, 84);
             this.textBox_RefArticle.Name = "textBox_RefArticle";
             this.textBox_RefArticle.Size = new System.Drawing.Size(141, 28);
             this.textBox_RefArticle.TabIndex = 11;
@@ -131,7 +133,7 @@
             // textBox_Description
             // 
             this.textBox_Description.Font = new System.Drawing.Font("SimSun", 9F);
-            this.textBox_Description.Location = new System.Drawing.Point(209, 75);
+            this.textBox_Description.Location = new System.Drawing.Point(175, 83);
             this.textBox_Description.Name = "textBox_Description";
             this.textBox_Description.Size = new System.Drawing.Size(187, 28);
             this.textBox_Description.TabIndex = 12;
@@ -140,7 +142,7 @@
             // textBox_PriceHT
             // 
             this.textBox_PriceHT.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_PriceHT.Location = new System.Drawing.Point(922, 75);
+            this.textBox_PriceHT.Location = new System.Drawing.Point(888, 83);
             this.textBox_PriceHT.Name = "textBox_PriceHT";
             this.textBox_PriceHT.Size = new System.Drawing.Size(115, 28);
             this.textBox_PriceHT.TabIndex = 15;
@@ -149,7 +151,7 @@
             // textBox_Quantity
             // 
             this.textBox_Quantity.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_Quantity.Location = new System.Drawing.Point(1043, 75);
+            this.textBox_Quantity.Location = new System.Drawing.Point(1009, 83);
             this.textBox_Quantity.Name = "textBox_Quantity";
             this.textBox_Quantity.Size = new System.Drawing.Size(115, 28);
             this.textBox_Quantity.TabIndex = 16;
@@ -159,7 +161,7 @@
             // 
             this.comboBox_SubFamily.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox_SubFamily.FormattingEnabled = true;
-            this.comboBox_SubFamily.Location = new System.Drawing.Point(402, 76);
+            this.comboBox_SubFamily.Location = new System.Drawing.Point(368, 84);
             this.comboBox_SubFamily.Name = "comboBox_SubFamily";
             this.comboBox_SubFamily.Size = new System.Drawing.Size(338, 26);
             this.comboBox_SubFamily.TabIndex = 17;
@@ -169,37 +171,48 @@
             // 
             this.comboBox_Brand.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox_Brand.FormattingEnabled = true;
-            this.comboBox_Brand.Location = new System.Drawing.Point(746, 77);
+            this.comboBox_Brand.Location = new System.Drawing.Point(712, 85);
             this.comboBox_Brand.Name = "comboBox_Brand";
             this.comboBox_Brand.Size = new System.Drawing.Size(170, 26);
             this.comboBox_Brand.TabIndex = 18;
             this.comboBox_Brand.SelectedIndexChanged += new System.EventHandler(this.comboBox_Brand_SelectedIndexChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox_Description);
+            this.groupBox1.Controls.Add(this.comboBox_Brand);
+            this.groupBox1.Controls.Add(this.label_RefArticle);
+            this.groupBox1.Controls.Add(this.comboBox_SubFamily);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.textBox_Quantity);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textBox_PriceHT);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.textBox_RefArticle);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Location = new System.Drawing.Point(34, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1189, 123);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "ModifyArticle";
             // 
             // ModifyArticle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 224);
-            this.Controls.Add(this.comboBox_Brand);
-            this.Controls.Add(this.comboBox_SubFamily);
-            this.Controls.Add(this.textBox_Quantity);
-            this.Controls.Add(this.textBox_PriceHT);
-            this.Controls.Add(this.textBox_Description);
-            this.Controls.Add(this.textBox_RefArticle);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label_RefArticle);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Btn_CancelModifyArticle);
             this.Controls.Add(this.Btn_SubmitModifyArticle);
             this.MaximumSize = new System.Drawing.Size(1300, 280);
             this.MinimumSize = new System.Drawing.Size(1300, 280);
             this.Name = "ModifyArticle";
             this.Text = "ModifyArticle";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -218,5 +231,6 @@
         private System.Windows.Forms.TextBox textBox_Quantity;
         private System.Windows.Forms.ComboBox comboBox_SubFamily;
         private System.Windows.Forms.ComboBox comboBox_Brand;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

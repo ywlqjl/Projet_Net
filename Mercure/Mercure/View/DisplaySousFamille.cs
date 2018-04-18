@@ -14,15 +14,15 @@ namespace Mercure.View
 {
     public partial class DisplaySousFamille : Form
     {
+        public static ListViewItem SelectedSubFamily;
+
         public DisplaySousFamille()
         {
             InitializeComponent();
+            this.KeyPreview = true;
             LoadSubFamillies();
         }
 
-        /// <summary>
-        /// load sub familly
-        /// </summary>
         private void LoadSubFamillies()
         {
             this.List_View_Sous_Famille.Items.Clear();
@@ -38,12 +38,44 @@ namespace Mercure.View
                 Item.SubItems.Add(Name_Item);
 
                 FamillyController Familly_Controller = new FamillyController();
-                Familly Familly = Familly_Controller.GetFamillyByRef(SubFamilly.RefFamille1.RefFamille1);
+                Familly Familly = Familly_Controller.GetFamillyByRef(SubFamilly.RefSousFamille1);
 
                 ListViewItem.ListViewSubItem familly_Item = new ListViewItem.ListViewSubItem(Item, Familly != null ? Familly.Nom1 : "");
                 Item.SubItems.Add(familly_Item);
 
                 List_View_Sous_Famille.Items.Add(Item);
+            }
+        }
+
+        private void List_View_Sous_Famille_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void List_View_Sous_Famille_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = List_View_Sous_Famille.HitTest(e.X, e.Y);
+            SelectedSubFamily = info.Item;
+            Console.WriteLine(SelectedSubFamily.Text);
+            if (info.Item != null)
+            {
+                ModifySubFamily ModifySubFamily = new ModifySubFamily();
+                ModifySubFamily.GetSubFamilyToModify(SelectedSubFamily);
+
+                ModifySubFamily.ShowDialog(this);
+                if(ModifySubFamily.DialogResult == DialogResult.OK)
+                {
+                    LoadSubFamillies();
+                }
+
+            }
+        }
+
+        private void List_View_Sous_Famille_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F5)
+            {
+                LoadSubFamillies();
             }
         }
     }

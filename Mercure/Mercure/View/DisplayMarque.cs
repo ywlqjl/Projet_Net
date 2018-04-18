@@ -14,9 +14,12 @@ namespace Mercure.View
 {
     public partial class DisplayMarque : Form
     {
+        public static ListViewItem SelectedBrand;
+
         public DisplayMarque()
         {
             InitializeComponent();
+            this.KeyPreview = true;
             LoadBrands();
         }
 
@@ -35,6 +38,38 @@ namespace Mercure.View
                 refItem.SubItems.Add(nomItem);
                 List_View_Marque.Items.Add(refItem);
             }
+
+        }
+
+        private void List_View_Marque_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = List_View_Marque.HitTest(e.X, e.Y);
+            SelectedBrand = info.Item;
+            Console.WriteLine(SelectedBrand.Text);
+            if (info.Item != null)
+            {
+                ModifyBrand ModifyBrand = new ModifyBrand();
+                ModifyBrand.GetBrandToModify(SelectedBrand);
+
+                ModifyBrand.ShowDialog(this);
+                if(ModifyBrand.DialogResult == DialogResult.OK)
+                {
+                    LoadBrands();
+                }
+
+            }
+        }
+
+        private void List_View_Marque_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F5)
+            {
+                LoadBrands();
+            }
+        }
+
+        private void List_View_Marque_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

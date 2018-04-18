@@ -14,10 +14,13 @@ namespace Mercure.View
 {
     public partial class DisplayFamille : Form
     {
+        public static ListViewItem SelectedFamily;
         public DisplayFamille()
         {
             InitializeComponent();
+            this.KeyPreview = true;
             LoadFamillies();
+
         }
 
         private void LoadFamillies()
@@ -36,6 +39,40 @@ namespace Mercure.View
                 familleListView.Items.Add(refItem);
             }
 
+        }
+
+        private void familleListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void familleListView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = familleListView.HitTest(e.X, e.Y);
+            SelectedFamily = info.Item;
+            Console.WriteLine(SelectedFamily.Text);
+            if (info.Item != null)
+            {
+                ModifyFamille ModifyFamille = new ModifyFamille();
+                ModifyFamille.GetFamilyToModify(SelectedFamily);
+
+                ModifyFamille.ShowDialog(this);
+
+                if (ModifyFamille.DialogResult == DialogResult.OK)
+                {
+                    LoadFamillies();
+                }
+
+
+            }
+        }
+
+        private void familleListView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F5)
+            {
+                LoadFamillies();
+            }
         }
     }
 }

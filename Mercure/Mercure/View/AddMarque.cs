@@ -14,11 +14,9 @@ namespace Mercure.View
 {
     public partial class AddMarque : Form
     {
-        MarkController Mark_Controller = new MarkController();
         public AddMarque()
         {
             InitializeComponent();
-            Text_Box_Reference.Text = (Mark_Controller.GetMaxMarkId() + 1).ToString() ;
         }
 
         private void Btn_Cancel_Marque_Click(object sender, EventArgs e)
@@ -37,7 +35,7 @@ namespace Mercure.View
                 try
                 {
                     int Reference_Int = int.Parse(Reference);
-                    
+                    MarkController Mark_Controller = new MarkController();
                     Mark Mark = Mark_Controller.GetMarkByRef(Reference_Int);
 
                     if (Mark == null)

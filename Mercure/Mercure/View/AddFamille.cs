@@ -14,13 +14,9 @@ namespace Mercure.View
 {
     public partial class AddFamille : Form
     {
-        private FamillyController Familly_Controller = new FamillyController();
         public AddFamille()
         {
             InitializeComponent();
-           
-
-            Text_Box_Reference.Text = (Familly_Controller.GetMaxFamillyId()+1).ToString();
         }
 
         private void Btn_Cancel_Famille_Click(object sender, EventArgs e)
@@ -30,8 +26,8 @@ namespace Mercure.View
 
         private void Btn_Add_Famille_Click(object sender, EventArgs e)
         {
+            FamillyController Familly_Controller = new FamillyController();
 
-            Text_Box_Reference.Text = (Familly_Controller.GetMaxFamillyId()+1).ToString();
             String Reference = Text_Box_Reference.Text;
             String Name = Text_Box_Name.Text;
 

@@ -35,6 +35,9 @@ namespace Mercure.View
 
         }
 
+        /// <summary>
+        /// initialization
+        /// </summary>
         private void InitializeForm()
         {
             SubFamillyController Sub_Familly_Controller = new SubFamillyController();
@@ -72,9 +75,6 @@ namespace Mercure.View
         }
 
 
-
-
-
         private void textBox_RefArticle_TextChanged(object sender, EventArgs e)
         {
             Reference = textBox_RefArticle.Text;
@@ -87,9 +87,9 @@ namespace Mercure.View
         /// <param name="SelectedArticle">selected item</param>
         public void GetArticleToModify(ListViewItem SelectedArticle)
         {
-            ArticleController ArtController = new ArticleController();
+            //ArticleController ArtController = new ArticleController();
             Article ArticleToModify = new Article();
-            //ArticleToModify = ArtController.GetArticleByRef(Article.RefArticle1);
+            
             
             ArticleController ArticleController1 = new ArticleController();
             ArticleToModify = ArticleController1.GetArticleByRef(SelectedArticle.Text);
@@ -136,7 +136,6 @@ namespace Mercure.View
             Article Article = Article_Controller.GetArticleByRef(Reference);
 
             Article_Controller.UpdateArticle(Reference, Description, Sub_Familly.RefSousFamille1, Mark.RefMarque1, Price_Float, Quantity_Int);
-            //Article_Controller.InsertArticle(Reference, Description, Sub_Familly.RefSousFamille1, Mark.RefMarque1, Price_Float, Quantity_Int);
             MessageBox.Show("Article modified successfully ;)", "Article modified", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             this.DialogResult = DialogResult.OK;
@@ -146,27 +145,47 @@ namespace Mercure.View
 
 
         }
-
+        /// <summary>
+        /// get the input of user for description
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox_Description_TextChanged(object sender, EventArgs e)
         {
             Description = textBox_Description.Text;
         }
-
+        /// <summary>
+        /// get the new choice of user for subfamily
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBox_SubFamily_SelectedIndexChanged(object sender, EventArgs e)
         {
             Sub_Familly_Index = comboBox_SubFamily.SelectedIndex;
         }
-
+        /// <summary>
+        /// get the new choice of user for brand
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBox_Brand_SelectedIndexChanged(object sender, EventArgs e)
         {
             Mark_Index = comboBox_Brand.SelectedIndex;
         }
-
+        /// <summary>
+        /// get the new input of user for price
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox_PriceHT_TextChanged(object sender, EventArgs e)
         {
             Price = textBox_PriceHT.Text;
         }
-
+        /// <summary>
+        /// get the new input of user for quantity
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox_Quantity_TextChanged(object sender, EventArgs e)
         {
             Quantity = textBox_Quantity.Text;

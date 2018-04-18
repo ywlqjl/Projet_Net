@@ -41,12 +41,16 @@
             this.Column_Nom_Marque});
             this.List_View_Marque.FullRowSelect = true;
             this.List_View_Marque.GridLines = true;
-            this.List_View_Marque.Location = new System.Drawing.Point(12, 12);
+            this.List_View_Marque.Location = new System.Drawing.Point(18, 17);
+            this.List_View_Marque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.List_View_Marque.Name = "List_View_Marque";
-            this.List_View_Marque.Size = new System.Drawing.Size(343, 414);
+            this.List_View_Marque.Size = new System.Drawing.Size(512, 572);
             this.List_View_Marque.TabIndex = 1;
             this.List_View_Marque.UseCompatibleStateImageBehavior = false;
             this.List_View_Marque.View = System.Windows.Forms.View.Details;
+            this.List_View_Marque.SelectedIndexChanged += new System.EventHandler(this.List_View_Marque_SelectedIndexChanged);
+            this.List_View_Marque.KeyDown += new System.Windows.Forms.KeyEventHandler(this.List_View_Marque_KeyDown);
+            this.List_View_Marque.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.List_View_Marque_MouseDoubleClick);
             // 
             // Column_Reference_Marque
             // 
@@ -60,10 +64,11 @@
             // 
             // DisplayMarque
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 440);
+            this.ClientSize = new System.Drawing.Size(549, 609);
             this.Controls.Add(this.List_View_Marque);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DisplayMarque";
             this.Text = "DisplayMarque";
             this.ResumeLayout(false);

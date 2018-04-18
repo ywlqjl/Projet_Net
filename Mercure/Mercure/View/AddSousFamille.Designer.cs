@@ -48,9 +48,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.Text_Box_Reference);
-            this.groupBox1.Location = new System.Drawing.Point(22, 20);
+            this.groupBox1.Location = new System.Drawing.Point(22, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(325, 102);
+            this.groupBox1.Size = new System.Drawing.Size(325, 111);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add Sub Familly";
@@ -58,58 +58,57 @@
             // Combo_Box_Famille
             // 
             this.Combo_Box_Famille.FormattingEnabled = true;
-            this.Combo_Box_Famille.Location = new System.Drawing.Point(117, 71);
+            this.Combo_Box_Famille.Location = new System.Drawing.Point(117, 77);
             this.Combo_Box_Famille.Name = "Combo_Box_Famille";
-            this.Combo_Box_Famille.Size = new System.Drawing.Size(200, 20);
+            this.Combo_Box_Famille.Size = new System.Drawing.Size(200, 21);
             this.Combo_Box_Famille.TabIndex = 6;
             // 
             // Text_Box_Name
             // 
-            this.Text_Box_Name.Location = new System.Drawing.Point(117, 47);
+            this.Text_Box_Name.Location = new System.Drawing.Point(117, 51);
             this.Text_Box_Name.Name = "Text_Box_Name";
-            this.Text_Box_Name.Size = new System.Drawing.Size(200, 21);
+            this.Text_Box_Name.Size = new System.Drawing.Size(200, 20);
             this.Text_Box_Name.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 78);
+            this.label3.Location = new System.Drawing.Point(24, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Familly : ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 54);
+            this.label2.Location = new System.Drawing.Point(24, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 12);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Name : ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 29);
+            this.label1.Location = new System.Drawing.Point(24, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 12);
+            this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Reference : ";
             // 
             // Text_Box_Reference
             // 
-            this.Text_Box_Reference.Enabled = false;
-            this.Text_Box_Reference.Location = new System.Drawing.Point(117, 23);
+            this.Text_Box_Reference.Location = new System.Drawing.Point(117, 25);
             this.Text_Box_Reference.Name = "Text_Box_Reference";
-            this.Text_Box_Reference.Size = new System.Drawing.Size(200, 21);
+            this.Text_Box_Reference.Size = new System.Drawing.Size(200, 20);
             this.Text_Box_Reference.TabIndex = 0;
             // 
             // Btn_Cancel_Sous_Famille
             // 
-            this.Btn_Cancel_Sous_Famille.Location = new System.Drawing.Point(272, 128);
+            this.Btn_Cancel_Sous_Famille.Location = new System.Drawing.Point(272, 139);
             this.Btn_Cancel_Sous_Famille.Name = "Btn_Cancel_Sous_Famille";
-            this.Btn_Cancel_Sous_Famille.Size = new System.Drawing.Size(75, 21);
+            this.Btn_Cancel_Sous_Famille.Size = new System.Drawing.Size(75, 23);
             this.Btn_Cancel_Sous_Famille.TabIndex = 5;
             this.Btn_Cancel_Sous_Famille.Text = "Cancel";
             this.Btn_Cancel_Sous_Famille.UseVisualStyleBackColor = true;
@@ -117,9 +116,9 @@
             // 
             // Btn_Add_Sous_Famille
             // 
-            this.Btn_Add_Sous_Famille.Location = new System.Drawing.Point(191, 128);
+            this.Btn_Add_Sous_Famille.Location = new System.Drawing.Point(191, 139);
             this.Btn_Add_Sous_Famille.Name = "Btn_Add_Sous_Famille";
-            this.Btn_Add_Sous_Famille.Size = new System.Drawing.Size(75, 21);
+            this.Btn_Add_Sous_Famille.Size = new System.Drawing.Size(75, 23);
             this.Btn_Add_Sous_Famille.TabIndex = 4;
             this.Btn_Add_Sous_Famille.Text = "Add";
             this.Btn_Add_Sous_Famille.UseVisualStyleBackColor = true;
@@ -127,9 +126,9 @@
             // 
             // AddSousFamille
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 155);
+            this.ClientSize = new System.Drawing.Size(357, 168);
             this.Controls.Add(this.Btn_Cancel_Sous_Famille);
             this.Controls.Add(this.Btn_Add_Sous_Famille);
             this.Controls.Add(this.groupBox1);
