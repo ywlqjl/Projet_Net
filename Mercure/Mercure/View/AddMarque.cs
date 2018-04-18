@@ -17,6 +17,8 @@ namespace Mercure.View
         public AddMarque()
         {
             InitializeComponent();
+            MarkController Mark_Controller = new MarkController();
+            Text_Box_Reference.Text = (Mark_Controller.GetMaxMarkId() + 1).ToString();
         }
 
         private void Btn_Cancel_Marque_Click(object sender, EventArgs e)

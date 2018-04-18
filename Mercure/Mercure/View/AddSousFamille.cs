@@ -18,13 +18,15 @@ namespace Mercure.View
         {
             InitializeComponent();
             InitializeForm();
+
         }
 
         private void InitializeForm()
         {
             FamillyController Familly_Controller = new FamillyController();
             List<Familly> List_Familly = Familly_Controller.GetAllFamilly();
-
+            SubFamillyController Sub_Familly_Controller = new SubFamillyController();
+            Text_Box_Reference.Text = (Sub_Familly_Controller.GetMaxSubFamillyId() + 1).ToString();
             foreach (Familly Familly in List_Familly)
             {
                 Combo_Box_Famille.Items.Add(Familly.Nom1);

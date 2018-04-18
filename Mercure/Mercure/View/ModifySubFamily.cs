@@ -49,7 +49,7 @@ namespace Mercure.View
             SubFamilly SubFamilyToModify = new SubFamilly();
 
             SubFamilyToModify = SubFamController.GetSubFamillyByRef(int.Parse(SelectedSubFamily.Text));
-            Console.WriteLine("列表中选中的sub id"+SelectedSubFamily.Text);
+            //Console.WriteLine("列表中选中的sub id"+SelectedSubFamily.Text);
 
             this.textBox_RefSF.Text = SubFamilyToModify.RefSousFamille1.ToString();
             this.textBox_NameSF.Text = SubFamilyToModify.Nom1.ToString();
@@ -89,9 +89,7 @@ namespace Mercure.View
             SubFamillyController SubFamily_Controller = new SubFamillyController();
             //SubFamilly SubFamilly = SubFamily_Controller.GetSubFamillyByRef(RefSubFamily_Int);
 
-            Console.WriteLine("要修改为sub id"+RefSubFamily_Int);
-            Console.WriteLine("要修改为fam id"+RefFamily);
-            Console.WriteLine("要修改为sub name"+NameSubFamily);
+           
             SubFamily_Controller.UpdateSubFamilly(RefSubFamily_Int, RefFamily, NameSubFamily);
             MessageBox.Show("SubFamily modified successfully ;)", "SubFamily modified", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

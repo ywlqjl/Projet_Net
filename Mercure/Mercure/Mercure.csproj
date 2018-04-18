@@ -124,6 +124,24 @@
     <Compile Include="View\ModifyArticle.Designer.cs">
       <DependentUpon>ModifyArticle.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ModifyBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ModifyBrand.Designer.cs">
+      <DependentUpon>ModifyBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifyFamille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ModifyFamille.Designer.cs">
+      <DependentUpon>ModifyFamille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifySubFamily.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ModifySubFamily.Designer.cs">
+      <DependentUpon>ModifySubFamily.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\OpenFile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +177,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ModifyArticle.resx">
       <DependentUpon>ModifyArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ModifyBrand.resx">
+      <DependentUpon>ModifyBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ModifyFamille.resx">
+      <DependentUpon>ModifyFamille.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ModifySubFamily.resx">
+      <DependentUpon>ModifySubFamily.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\OpenFile.resx">
       <DependentUpon>OpenFile.cs</DependentUpon>

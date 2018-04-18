@@ -145,7 +145,8 @@ namespace Mercure
                 this.BindDataToView(L_Item);
                 
             }
-            else {
+            else if(Column==0||Column==1)
+            {
                 this.listView_ShowBD.Groups.Clear();
             }
             // Determine whether the column is the same as the last column clicked.

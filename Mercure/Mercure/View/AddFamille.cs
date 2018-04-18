@@ -17,6 +17,8 @@ namespace Mercure.View
         public AddFamille()
         {
             InitializeComponent();
+            FamillyController Familly_Controller = new FamillyController();
+            Text_Box_Reference.Text = (Familly_Controller.GetMaxFamillyId() + 1).ToString();
         }
 
         private void Btn_Cancel_Famille_Click(object sender, EventArgs e)

@@ -15,6 +15,7 @@ namespace Mercure.View
     public partial class DisplayFamille : Form
     {
         public static ListViewItem SelectedFamily;
+
         public DisplayFamille()
         {
             InitializeComponent();
@@ -72,6 +73,44 @@ namespace Mercure.View
             if (e.KeyCode == Keys.F5)
             {
                 LoadFamillies();
+            }
+        }
+
+        private void AddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddArticle Add_Article = new AddArticle();
+            Add_Article.ShowDialog(this);
+
+            if (Add_Article.DialogResult == DialogResult.OK)
+            {
+                LoadFamillies();
+            }
+        }
+
+        private void OnRightClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = this.familleListView.HitTest(e.X, e.Y);
+            SelectedFamily = info.Item;
+            if (e.Button == MouseButtons.Right)
+            {
+                this.FamilyStrip.Show(this.familleListView, e.Location);
+            }
+        }
+
+        private void DeleteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FamillyController Familly_Controller = new FamillyController();
+            if (SelectedFamily != null)
+            {
+                
+                Response Response = Familly_Controller.DeleteFamilly(int.Parse(SelectedFamily.Text));
+                if (Response.State1)
+                {
+                    LoadFamillies();
+                }
+                else {
+                    MessageBox.Show(Response.Message1, "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }

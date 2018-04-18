@@ -107,13 +107,30 @@ namespace Mercure.Dao
         /// <returns>Number of row</returns>
         public int DeleteSubFamilly(int RefSubFamilly)
         {
+            SQLiteCommand SelectCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                SelectCommand.CommandText = "SELECT Count(*) FROM Articles WHERE RefSousFamille = @Ref";
+                SelectCommand.Parameters.AddRange(new[] {
+                    new SQLiteParameter("@Ref",RefSubFamilly)
+                });
+            
+                SQLiteDataReader reader = SelectCommand.ExecuteReader();
+                Tran.Commit();
+                if (reader.Read())
+                {
+                    if (int.Parse(reader[0].ToString()) != 0)
+                        throw new Exception("Can't delete subfamily!");
+                }
+            }
+
             int Count = 0;
             SQLiteCommand DeleteCommand = new SQLiteCommand(Connection);
             using (SQLiteTransaction Tran = Connection.BeginTransaction())
             {
                 DeleteCommand.CommandText = "Delete FROM SousFamilles WHERE RefSousFamille = @Ref";
                 DeleteCommand.Parameters.AddRange(new[] {
-                    new SQLiteParameter("@RefSUB",RefSubFamilly),
+                    new SQLiteParameter("@Ref",RefSubFamilly),
                  });
                 Count = DeleteCommand.ExecuteNonQuery();
                 Tran.Commit();
@@ -133,7 +150,7 @@ namespace Mercure.Dao
             SQLiteCommand InsertCommand = new SQLiteCommand(Connection);
             using (SQLiteTransaction Tran = Connection.BeginTransaction())
             {
-                InsertCommand.CommandText = "UPDATE SousFamilles SET Nom = @Nom, RefFamille = @RefFamille WHERE RefMarque = @Ref";
+                InsertCommand.CommandText = "UPDATE SousFamilles SET Nom = @Nom, RefFamille = @RefFamille WHERE RefSousFamille = @Ref";
                 InsertCommand.Parameters.AddRange(new[] {
                     new SQLiteParameter("@Nom",SubFamilly.Nom1),
                     new SQLiteParameter("@RefFamille",SubFamilly.RefFamille1.RefFamille1),

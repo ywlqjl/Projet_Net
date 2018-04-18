@@ -38,7 +38,7 @@ namespace Mercure.View
                 Item.SubItems.Add(Name_Item);
 
                 FamillyController Familly_Controller = new FamillyController();
-                Familly Familly = Familly_Controller.GetFamillyByRef(SubFamilly.RefSousFamille1);
+                Familly Familly = Familly_Controller.GetFamillyByRef(SubFamilly.RefFamille1.RefFamille1);
 
                 ListViewItem.ListViewSubItem familly_Item = new ListViewItem.ListViewSubItem(Item, Familly != null ? Familly.Nom1 : "");
                 Item.SubItems.Add(familly_Item);
@@ -76,6 +76,45 @@ namespace Mercure.View
             if (e.KeyCode == Keys.F5)
             {
                 LoadSubFamillies();
+            }
+        }
+
+        private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SubFamillyController Sub_Familly_Controller = new SubFamillyController();
+            if (SelectedSubFamily != null)
+            {
+
+                Response Response = Sub_Familly_Controller.DeleteSubFamilly(int.Parse(SelectedSubFamily.Text));
+                if (Response.State1)
+                {
+                    LoadSubFamillies();
+                }
+                else
+                {
+                    MessageBox.Show(Response.Message1, "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void AddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddSousFamille Add_Sous_Famille = new AddSousFamille();
+            Add_Sous_Famille.ShowDialog(this);
+
+            if (Add_Sous_Famille.DialogResult == DialogResult.OK)
+            {
+                LoadSubFamillies();
+            }
+        }
+
+        private void OnRightClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = this.List_View_Sous_Famille.HitTest(e.X, e.Y);
+            SelectedSubFamily = info.Item;
+            if (e.Button == MouseButtons.Right)
+            {
+                this.SubFamilyMenuStrip.Show(this.List_View_Sous_Famille, e.Location);
             }
         }
     }

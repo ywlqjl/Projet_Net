@@ -98,6 +98,23 @@ namespace Mercure.Dao
         /// <returns>Number of row</returns>
         public int DeleteMark(int RefMark)
         {
+            SQLiteCommand SelectCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                SelectCommand.CommandText = "SELECT Count(*) FROM Articles WHERE RefMarque = @Ref";
+                SelectCommand.Parameters.AddRange(new[] {
+                    new SQLiteParameter("@Ref",RefMark)
+                });
+
+                SQLiteDataReader reader = SelectCommand.ExecuteReader();
+                Tran.Commit();
+                if (reader.Read())
+                {
+                    if (int.Parse(reader[0].ToString()) != 0)
+                        throw new Exception("Can't delete brand!");
+                }
+            }
+
             int Count = 0;
             SQLiteCommand DeleteCommand = new SQLiteCommand(Connection);
             using (SQLiteTransaction Tran = Connection.BeginTransaction())

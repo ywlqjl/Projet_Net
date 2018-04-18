@@ -72,5 +72,44 @@ namespace Mercure.View
         {
 
         }
+
+        private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MarkController Mark_Controller = new MarkController();
+            if (SelectedBrand != null)
+            {
+
+                Response Response = Mark_Controller.DeleteMark(int.Parse(SelectedBrand.Text));
+                if (Response.State1)
+                {
+                    LoadBrands();
+                }
+                else
+                {
+                    MessageBox.Show(Response.Message1, "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void AddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddMarque Add_Marque = new AddMarque();
+            Add_Marque.ShowDialog(this);
+
+            if (Add_Marque.DialogResult == DialogResult.OK)
+            {
+                LoadBrands();
+            }
+        }
+
+        private void OnRightClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = this.List_View_Marque.HitTest(e.X, e.Y);
+            SelectedBrand = info.Item;
+            if (e.Button == MouseButtons.Right)
+            {
+                this.MarkMenuStrip.Show(this.List_View_Marque, e.Location);
+            }
+        }
     }
 }

@@ -104,6 +104,23 @@ namespace Mercure.Dao
         /// <returns>Number of row</returns>
         public int DeleteFamilly(int RefFamilly)
         {
+            SQLiteCommand SelectCommand = new SQLiteCommand(Connection);
+            using (SQLiteTransaction Tran = Connection.BeginTransaction())
+            {
+                SelectCommand.CommandText = "SELECT Count(*) FROM SousFamilles WHERE RefFamille = @Ref";
+                SelectCommand.Parameters.AddRange(new[] {
+                    new SQLiteParameter("@Ref",RefFamilly)
+                });
+
+                SQLiteDataReader reader = SelectCommand.ExecuteReader();
+                Tran.Commit();
+                if (reader.Read())
+                {
+                    if(int.Parse(reader[0].ToString())!=0)
+                        throw new Exception("Can't delete family!");
+                }
+            }
+
             int Count = 0;
             SQLiteCommand DeleteCommand = new SQLiteCommand(Connection);
             using (SQLiteTransaction Tran = Connection.BeginTransaction())

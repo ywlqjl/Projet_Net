@@ -34,7 +34,6 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.articleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.familleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.afficherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +45,7 @@
             this.afficherToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
+            this.ToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.listView_ShowBD = new System.Windows.Forms.ListView();
             this.RefArticle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Description = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,7 +59,6 @@
             this.AddArticleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModifyArticleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DeleteArticleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.StatusStrip.SuspendLayout();
             this.Strip.SuspendLayout();
@@ -100,7 +99,6 @@
             // 
             this.articleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterToolStripMenuItem,
-            this.modifierToolStripMenuItem,
             this.supprimerToolStripMenuItem});
             this.articleToolStripMenuItem.Name = "articleToolStripMenuItem";
             this.articleToolStripMenuItem.Size = new System.Drawing.Size(56, 22);
@@ -109,20 +107,14 @@
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ajouterToolStripMenuItem.Text = "Add";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
-            // 
-            // modifierToolStripMenuItem
-            // 
-            this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.modifierToolStripMenuItem.Text = "Modify";
             // 
             // supprimerToolStripMenuItem
             // 
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.supprimerToolStripMenuItem.Text = "Delete";
             // 
             // familleToolStripMenuItem
@@ -206,6 +198,11 @@
             this.StatusStrip.TabIndex = 1;
             this.StatusStrip.Text = "statusStrip1";
             // 
+            // ToolStripStatusLabel
+            // 
+            this.ToolStripStatusLabel.Name = "ToolStripStatusLabel";
+            this.ToolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
+            // 
             // listView_ShowBD
             // 
             this.listView_ShowBD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -219,7 +216,7 @@
             this.Quantity});
             this.listView_ShowBD.FullRowSelect = true;
             this.listView_ShowBD.Location = new System.Drawing.Point(44, 52);
-            this.listView_ShowBD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView_ShowBD.Margin = new System.Windows.Forms.Padding(2);
             this.listView_ShowBD.MultiSelect = false;
             this.listView_ShowBD.Name = "listView_ShowBD";
             this.listView_ShowBD.Size = new System.Drawing.Size(752, 339);
@@ -270,7 +267,7 @@
             // 
             this.Btn_UpdateListView.AutoSize = true;
             this.Btn_UpdateListView.Location = new System.Drawing.Point(732, 393);
-            this.Btn_UpdateListView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_UpdateListView.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_UpdateListView.Name = "Btn_UpdateListView";
             this.Btn_UpdateListView.Size = new System.Drawing.Size(63, 23);
             this.Btn_UpdateListView.TabIndex = 3;
@@ -318,11 +315,6 @@
             this.DeleteArticleToolStripMenuItem.Text = "Delete Article";
             this.DeleteArticleToolStripMenuItem.Click += new System.EventHandler(this.DeleteArticleToolStripMenuItem_Click);
             // 
-            // ToolStripStatusLabel
-            // 
-            this.ToolStripStatusLabel.Name = "ToolStripStatusLabel";
-            this.ToolStripStatusLabel.Size = new System.Drawing.Size(0, 17);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -334,11 +326,11 @@
             this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(1041, 588);
             this.MinimumSize = new System.Drawing.Size(855, 484);
             this.Name = "Main";
-            this.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Padding = new System.Windows.Forms.Padding(7);
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Main_Load);
             this.DoubleClick += new System.EventHandler(this.listView_ShowBD_SelectedIndexChanged);
@@ -370,7 +362,6 @@
         private System.Windows.Forms.Label Label_TotalCount;
         private System.Windows.Forms.ToolStripMenuItem articleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem familleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem afficherToolStripMenuItem;
