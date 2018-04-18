@@ -31,6 +31,7 @@ namespace Mercure
         {
             InitializeComponent();
             listView_ShowBD_DataBinding();
+            this.KeyPreview = true;
             //this.listView_ShowBD.ItemActivate += new EventHandler(listView_ShowBD.item); 
         }
         /// <summary>
@@ -263,7 +264,7 @@ namespace Mercure
             if (info.Item != null)
             {
                 ModifyArticle ModifyArticle = new ModifyArticle();
-                ModifyArticle.GetArticleToModify(SelectedArticle);
+                ModifyArticle.GetArticleToModify3(SelectedArticle);
                 ModifyArticle.GetArticleToModify2(SelectedArticle);
 
                 ModifyArticle.ShowDialog(this);
@@ -298,7 +299,7 @@ namespace Mercure
             if (SelectedArticle!= null)
             {
                 ModifyArticle ModifyArticle = new ModifyArticle();
-                ModifyArticle.GetArticleToModify(SelectedArticle);
+                ModifyArticle.GetArticleToModify3(SelectedArticle);
                 ModifyArticle.GetArticleToModify2(SelectedArticle);
 
                 ModifyArticle.ShowDialog(this);
@@ -329,6 +330,20 @@ namespace Mercure
                     listView_ShowBD_DataBinding();
                 }
             }
+        }
+
+        private void Main_KeyPress(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F5 )
+            {
+                listView_ShowBD_DataBinding();
+            }
+          
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
         }
     }
 }
