@@ -10,19 +10,6 @@ c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\obj\Debu
 c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\obj\Debug\Mercure.pdb
 c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\obj\Debug\Mercure.Main.resources
 c:\users\yanwenli\documents\visual studio 2015\Projects\Mercure\Mercure\obj\Debug\Mercure.OpenFile.resources
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\bin\Debug\Mercure.exe.config
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.exe
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.pdb
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\bin\Debug\Mercure.exe
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\bin\Debug\Mercure.pdb
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\bin\Debug\System.Data.SQLite.dll
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\bin\Debug\System.Data.SQLite.xml
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.csprojResolveAssemblyReference.cache
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.Main.resources
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.OpenFile.resources
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.Properties.Resources.resources
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.csproj.GenerateResource.Cache
-C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.ModifyArticle.resources
 C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\bin\Debug\Mercure.exe.config
 C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.exe
 C:\Users\yanwenli\Documents\Visual Studio 2015\Projects\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.pdb
@@ -56,6 +43,12 @@ C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug
 C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplayFamille.resources
 C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplayMarque.resources
 C:\Users\Ayoub IDEL\Documents\Workspaces\C#\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplaySousFamille.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\bin\Debug\Mercure.exe.config
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\bin\Debug\Mercure.exe
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\bin\Debug\Mercure.pdb
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\bin\Debug\System.Data.SQLite.dll
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\bin\Debug\System.Data.SQLite.xml
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.csprojResolveAssemblyReference.cache
 C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.AddArticle.resources
 C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.AddFamille.resources
 C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.AddMarque.resources
@@ -63,3 +56,10 @@ C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercu
 C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplayFamille.resources
 C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplayMarque.resources
 C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.DisplaySousFamille.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.Main.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.View.ModifyArticle.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.OpenFile.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.Properties.Resources.resources
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.csproj.GenerateResource.Cache
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.exe
+C:\Users\penghanyuan\Documents\GitHub\Projet_Net\Mercure\Mercure\obj\Debug\Mercure.pdb

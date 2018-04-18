@@ -136,7 +136,7 @@ namespace Mercure.View
             Article Article = Article_Controller.GetArticleByRef(Reference);
 
             Article_Controller.UpdateArticle(Reference, Description, Sub_Familly.RefSousFamille1, Mark.RefMarque1, Price_Float, Quantity_Int);
-            Article_Controller.InsertArticle(Reference, Description, Sub_Familly.RefSousFamille1, Mark.RefMarque1, Price_Float, Quantity_Int);
+            //Article_Controller.InsertArticle(Reference, Description, Sub_Familly.RefSousFamille1, Mark.RefMarque1, Price_Float, Quantity_Int);
             MessageBox.Show("Article modified successfully ;)", "Article modified", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             this.DialogResult = DialogResult.OK;
