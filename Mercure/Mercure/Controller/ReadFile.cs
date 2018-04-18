@@ -12,8 +12,6 @@ namespace Mercure
 {
     class ReadFile
     {
-        static string filename;
-        static string filepath;
         static XmlDocument xf;
         public static void LoadFile(string filename) {
 
