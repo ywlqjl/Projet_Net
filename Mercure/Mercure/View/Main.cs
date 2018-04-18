@@ -256,6 +256,11 @@ namespace Mercure
             }
         }
 
+        /// <summary>
+        /// right click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnRightClick(object sender, MouseEventArgs e)
         {
             ListViewHitTestInfo info = listView_ShowBD.HitTest(e.X, e.Y);
@@ -267,6 +272,11 @@ namespace Mercure
             //Strip.Click
         }
 
+        /// <summary>
+        /// strip add item click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddArticleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddArticle Add_Article = new AddArticle();
@@ -278,6 +288,11 @@ namespace Mercure
             }
         }
 
+        /// <summary>
+        /// strip modify item click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ModifyArticleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (SelectedArticle!= null)
@@ -290,6 +305,11 @@ namespace Mercure
             }
         }
 
+        /// <summary>
+        /// strip delete item click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteArticleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (SelectedArticle != null)
@@ -303,6 +323,11 @@ namespace Mercure
 
         }
 
+        /// <summary>
+        /// delete article button click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_DeleteArticle_Click(object sender, EventArgs e)
         {
             if (SelectedArticle != null)
@@ -315,6 +340,12 @@ namespace Mercure
             }
         }
 
+
+        /// <summary>
+        /// f5 reload
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Main_KeyPress(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F5 )
@@ -324,6 +355,12 @@ namespace Mercure
           
         }
 
+
+        /// <summary>
+        /// load main window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Main_Load(object sender, EventArgs e)
         {
             this.KeyPreview = true;
