@@ -14,3 +14,7 @@ Mercure/Mercure/obj/Debug/Mercure.csproj.GenerateResource.Cache
 *.pdb
 *.Cache
 *.exe
+
+Mercure/Mercure/bin/
+
+Mercure/Mercure/obj/
