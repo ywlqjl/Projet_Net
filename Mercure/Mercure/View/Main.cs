@@ -25,7 +25,6 @@ namespace Mercure
 
 
         //For Sorting List View
-        private int sortColumn = -1;
 
         public Main()
         {
@@ -47,7 +46,7 @@ namespace Mercure
             //Console.WriteLine(Openfile.DialogResult);
             if (Openfile.DialogResult == DialogResult.OK)
             {
-               
+                this.ToolStripStatusLabel.Text = "You have imported a XML file!";
                 listView_ShowBD_DataBinding();
             }
 
@@ -80,9 +79,6 @@ namespace Mercure
         /// </summary>
         private void listView_ShowBD_DataBinding()
         {
-           
-           
-
             ListArticle = ArticleController.GetAllArticle();
             listView_ShowBD.Items.Clear();
             this.BindDataToView(this.MakeListItem());
@@ -116,20 +112,21 @@ namespace Mercure
             ListArticle = ArticleController.GetAllArticle();
 
             int Column = e.Column;
-            if (Column == 2 || Column==3)
+            if (Column == 2 || Column == 3)
             {
-                this.listView_ShowBD.Items.Clear();
+                
                 this.listView_ShowBD.Groups.Clear();
+                this.listView_ShowBD.Items.Clear();
                 // sub familly
                 List<string> GroupString = new List<string>();
                 List<ListViewGroup> GroupList = new List<ListViewGroup>();
                 ListViewItem[] L_Item = this.MakeListItem();
-                foreach(ListViewItem Item in L_Item)
+                foreach (ListViewItem Item in L_Item)
                 {
                     // create group list
                     if (!GroupString.Contains(Item.SubItems[Column].Text))
                     {
-                        ListViewGroup Group = new ListViewGroup(Item.SubItems[2].Text, HorizontalAlignment.Left);
+                        ListViewGroup Group = new ListViewGroup(Item.SubItems[Column].Text, HorizontalAlignment.Left);
                         GroupList.Add(Group);
                         Item.Group = Group;
                         GroupString.Add(Item.SubItems[Column].Text);
@@ -148,9 +145,11 @@ namespace Mercure
                 this.BindDataToView(L_Item);
                 
             }
-            /*
+            else {
+                this.listView_ShowBD.Groups.Clear();
+            }
             // Determine whether the column is the same as the last column clicked.
-            if (e.Column != sortColumn)
+           /* if (e.Column != sortColumn)
             {
                 // Set the sort column to the new column.
                 sortColumn = e.Column;
@@ -165,12 +164,17 @@ namespace Mercure
                 else
                     listView_ShowBD.Sorting = System.Windows.Forms.SortOrder.Ascending;
             }
+            */
+            listView_ShowBD.Sorting = System.Windows.Forms.SortOrder.Ascending;
 
             // Call the sort method to manually sort.
             listView_ShowBD.Sort();
             // Set the ListViewItemSorter property to a new ListViewItemComparer
             // object.
-            this.listView_ShowBD.ListViewItemSorter = new ListViewItemComparer(e.Column, listView_ShowBD.Sorting);*/
+            this.listView_ShowBD.ListViewItemSorter = new ListViewItemComparer(e.Column, listView_ShowBD.Sorting);
+
+
+
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -181,6 +185,7 @@ namespace Mercure
             if (Add_Article.DialogResult == DialogResult.OK)
             {
                 listView_ShowBD_DataBinding();
+                this.ToolStripStatusLabel.Text = "You have added an article!";
             }
 
         }
@@ -193,6 +198,7 @@ namespace Mercure
             if (Add_Famille.DialogResult == DialogResult.OK)
             {
                 listView_ShowBD_DataBinding();
+                this.ToolStripStatusLabel.Text = "You have added a family!";
             }
         }
 
@@ -204,6 +210,7 @@ namespace Mercure
             if (Add_Sous_Famille.DialogResult == DialogResult.OK)
             {
                 listView_ShowBD_DataBinding();
+                this.ToolStripStatusLabel.Text = "You have added a sub family!";
             }
         }
 
@@ -215,6 +222,7 @@ namespace Mercure
             if (Add_Marque.DialogResult == DialogResult.OK)
             {
                 listView_ShowBD_DataBinding();
+                this.ToolStripStatusLabel.Text = "You have added a brand!";
             }
         }
 
@@ -252,7 +260,12 @@ namespace Mercure
                 ModifyArticle.GetArticleToModify(SelectedArticle);
     
                 ModifyArticle.ShowDialog(this);
-                this.listView_ShowBD_DataBinding();
+                if (ModifyArticle.DialogResult == DialogResult.OK)
+                {
+                    this.listView_ShowBD_DataBinding();
+                    this.ToolStripStatusLabel.Text = "You have modified an article!";
+                }
+               
                
             }
         }
@@ -286,6 +299,7 @@ namespace Mercure
             if (Add_Article.DialogResult == DialogResult.OK)
             {
                 listView_ShowBD_DataBinding();
+                this.ToolStripStatusLabel.Text = "You have added an article!";
             }
         }
 
@@ -302,7 +316,11 @@ namespace Mercure
                 ModifyArticle.GetArticleToModify(SelectedArticle);
 
                 ModifyArticle.ShowDialog(this);
-
+                if (ModifyArticle.DialogResult == DialogResult.OK)
+                {
+                    this.listView_ShowBD_DataBinding();
+                    this.ToolStripStatusLabel.Text = "You have modified an article!";
+                }
             }
         }
 
@@ -319,6 +337,7 @@ namespace Mercure
                 if (Response.State1)
                 {
                     listView_ShowBD_DataBinding();
+                    this.ToolStripStatusLabel.Text = "You have deleted an article!";
                 }
             }
 
@@ -337,6 +356,7 @@ namespace Mercure
                 if (Response.State1)
                 {
                     listView_ShowBD_DataBinding();
+                    this.ToolStripStatusLabel.Text = "You have deleted an article!";
                 }
             }
         }
