@@ -112,7 +112,7 @@ namespace Mercure
         private void ColumnClickFunction(object sender, ColumnClickEventArgs e)
         {
 
-            /*ArticleController ArticleController = new ArticleController();
+            ArticleController ArticleController = new ArticleController();
             ListArticle = ArticleController.GetAllArticle();
 
             int Column = e.Column;
@@ -146,8 +146,8 @@ namespace Mercure
                 }
                 this.BindDataToView(L_Item);
                 
-            }*/
-            
+            }
+            /*
             // Determine whether the column is the same as the last column clicked.
             if (e.Column != sortColumn)
             {
@@ -169,7 +169,7 @@ namespace Mercure
             listView_ShowBD.Sort();
             // Set the ListViewItemSorter property to a new ListViewItemComparer
             // object.
-            this.listView_ShowBD.ListViewItemSorter = new ListViewItemComparer(e.Column, listView_ShowBD.Sorting);
+            this.listView_ShowBD.ListViewItemSorter = new ListViewItemComparer(e.Column, listView_ShowBD.Sorting);*/
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
