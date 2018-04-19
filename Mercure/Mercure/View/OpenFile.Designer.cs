@@ -37,7 +37,6 @@
             this.Btn_Update = new System.Windows.Forms.Button();
             this.textBox_ShowDetails = new System.Windows.Forms.TextBox();
             this.Btn_Close = new System.Windows.Forms.Button();
-            this.Btn_CancelLoad = new System.Windows.Forms.Button();
             this.label_ShowProgressState = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -60,7 +59,7 @@
             // Btn_Select
             // 
             this.Btn_Select.Location = new System.Drawing.Point(130, 51);
-            this.Btn_Select.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Select.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Select.Name = "Btn_Select";
             this.Btn_Select.Size = new System.Drawing.Size(64, 19);
             this.Btn_Select.TabIndex = 1;
@@ -71,7 +70,7 @@
             // FileProgress
             // 
             this.FileProgress.Location = new System.Drawing.Point(46, 125);
-            this.FileProgress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FileProgress.Margin = new System.Windows.Forms.Padding(2);
             this.FileProgress.Name = "FileProgress";
             this.FileProgress.Size = new System.Drawing.Size(460, 21);
             this.FileProgress.TabIndex = 2;
@@ -79,7 +78,7 @@
             // Txt_FilePath
             // 
             this.Txt_FilePath.Location = new System.Drawing.Point(46, 75);
-            this.Txt_FilePath.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_FilePath.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_FilePath.Name = "Txt_FilePath";
             this.Txt_FilePath.Size = new System.Drawing.Size(461, 21);
             this.Txt_FilePath.TabIndex = 3;
@@ -87,7 +86,7 @@
             // Btn_AddNew
             // 
             this.Btn_AddNew.Location = new System.Drawing.Point(338, 51);
-            this.Btn_AddNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_AddNew.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_AddNew.Name = "Btn_AddNew";
             this.Btn_AddNew.Size = new System.Drawing.Size(78, 19);
             this.Btn_AddNew.TabIndex = 4;
@@ -98,7 +97,7 @@
             // Btn_Update
             // 
             this.Btn_Update.Location = new System.Drawing.Point(428, 50);
-            this.Btn_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Update.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Update.Name = "Btn_Update";
             this.Btn_Update.Size = new System.Drawing.Size(78, 19);
             this.Btn_Update.TabIndex = 5;
@@ -109,7 +108,7 @@
             // textBox_ShowDetails
             // 
             this.textBox_ShowDetails.Location = new System.Drawing.Point(46, 151);
-            this.textBox_ShowDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox_ShowDetails.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_ShowDetails.Multiline = true;
             this.textBox_ShowDetails.Name = "textBox_ShowDetails";
             this.textBox_ShowDetails.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -119,24 +118,13 @@
             // Btn_Close
             // 
             this.Btn_Close.Location = new System.Drawing.Point(453, 325);
-            this.Btn_Close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn_Close.Margin = new System.Windows.Forms.Padding(2);
             this.Btn_Close.Name = "Btn_Close";
             this.Btn_Close.Size = new System.Drawing.Size(53, 25);
             this.Btn_Close.TabIndex = 7;
             this.Btn_Close.Text = "Close";
             this.Btn_Close.UseVisualStyleBackColor = true;
             this.Btn_Close.Click += new System.EventHandler(this.Btn_Close_Click);
-            // 
-            // Btn_CancelLoad
-            // 
-            this.Btn_CancelLoad.Location = new System.Drawing.Point(387, 325);
-            this.Btn_CancelLoad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Btn_CancelLoad.Name = "Btn_CancelLoad";
-            this.Btn_CancelLoad.Size = new System.Drawing.Size(55, 25);
-            this.Btn_CancelLoad.TabIndex = 8;
-            this.Btn_CancelLoad.Text = "Cancel";
-            this.Btn_CancelLoad.UseVisualStyleBackColor = true;
-            this.Btn_CancelLoad.Click += new System.EventHandler(this.Btn_CancelLoad_Click);
             // 
             // label_ShowProgressState
             // 
@@ -154,7 +142,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 381);
             this.Controls.Add(this.label_ShowProgressState);
-            this.Controls.Add(this.Btn_CancelLoad);
             this.Controls.Add(this.Btn_Close);
             this.Controls.Add(this.textBox_ShowDetails);
             this.Controls.Add(this.Btn_Update);
@@ -163,7 +150,7 @@
             this.Controls.Add(this.FileProgress);
             this.Controls.Add(this.Btn_Select);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(570, 420);
             this.MinimumSize = new System.Drawing.Size(570, 420);
@@ -186,7 +173,6 @@
         private System.Windows.Forms.Button Btn_Update;
         private System.Windows.Forms.TextBox textBox_ShowDetails;
         private System.Windows.Forms.Button Btn_Close;
-        private System.Windows.Forms.Button Btn_CancelLoad;
         private System.Windows.Forms.Label label_ShowProgressState;
     }
 }

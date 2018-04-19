@@ -154,7 +154,7 @@ namespace Mercure
                 
                 Response Response_Familly = Familly_Controller.InsertFamillys(Parse_Article.L_Familly1);
 
-                //this.textBox_ShowDetails.AppendText("Finished!\n");
+                this.textBox_ShowDetails.AppendText("Finished!\n");
 
                 this.label_ShowProgressState.Text = "Finished!";
             }
@@ -211,6 +211,7 @@ namespace Mercure
                 Response Response_Familly = Familly_Controller.InsertFamillys(Parse_Article.L_Familly1);
 
                 this.textBox_ShowDetails.AppendText("Finished!\n");
+                this.label_ShowProgressState.Text = "Finished!";
             }
             else {
                 // error
