@@ -87,8 +87,7 @@ namespace Mercure
             }
             catch (Exception E)
             {
-
-                MessageBox.Show("No database file found! Please put database file in right place.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No database file found! Please put database file in right place.\n"+E.Message, "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 System.Environment.Exit(0);
             }
 
