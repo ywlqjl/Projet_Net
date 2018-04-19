@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// Delegate of database operation for importing file
+/// </summary>
 namespace Mercure.Controller
 {
     class CommonDelegate

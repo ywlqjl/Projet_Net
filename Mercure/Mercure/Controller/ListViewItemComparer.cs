@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// Comparer
+/// </summary>
 namespace Mercure.Controller
 {
     class ListViewItemComparer : IComparer

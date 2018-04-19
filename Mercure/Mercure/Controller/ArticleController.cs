@@ -6,11 +6,20 @@ using System.Threading.Tasks;
 using Mercure.Dao;
 using Mercure.Model;
 
+/// <summary>
+/// Arcticle controller to access db
+/// </summary>
 namespace Mercure.Controller
 {
     class ArticleController : CommonDelegate
     {
         ArticleDAO ArticleDAO = new ArticleDAO();
+
+        /// <summary>
+        /// Insert the article list
+        /// </summary>
+        /// <param name="L_Article">List of article</param>
+        /// <returns>Response object</returns>
         public Response InsertArticles(List<Article> L_Article) {
             Response Response = new Response();
             try
@@ -60,6 +69,10 @@ namespace Mercure.Controller
             }
         }
 
+        /// <summary>
+        /// Get all articld
+        /// </summary>
+        /// <returns>List of article</returns>
         public List<Article> GetAllArticle()
         {
             return this.ArticleDAO.SelectAllArticle();

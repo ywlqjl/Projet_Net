@@ -5,12 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using Mercure.Dao;
 using Mercure.Model;
+
+/// <summary>
+/// Familly controller to access db
+/// </summary>
 namespace Mercure.Controller
 {
     class FamillyController:CommonDelegate
     {
         FamillyDAO FamillyDAO = new FamillyDAO();
 
+
+        /// <summary>
+        /// insert this list of family into db
+        /// </summary>
+        /// <param name="L_Familly">List of family</param>
+        /// <returns>Response object</returns>
         public Response InsertFamillys(List<Familly> L_Familly)
         {
             Response Response = new Response();
@@ -37,6 +47,11 @@ namespace Mercure.Controller
             
         }
 
+
+        /// <summary>
+        /// delete all family in db
+        /// </summary>
+        /// <returns>Response object</returns>
         public Response DeleteAllFamilly()
         {
             Response Response = new Response();
