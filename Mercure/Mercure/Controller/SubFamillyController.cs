@@ -7,10 +7,18 @@ using Mercure.Dao;
 using Mercure.Model;
 namespace Mercure.Controller
 {
+    /// <summary>
+    /// Subfamily controller to find, add, delete, update from the subfamily database
+    /// </summary>
     class SubFamillyController: CommonDelegate
     {
         SubFamillyDAO SubFamillyDAO = new SubFamillyDAO();
 
+        /// <summary>
+        /// Add into the subfamily database
+        /// </summary>
+        /// <param name="L_SubFamilly"></param>
+        /// <returns></returns>
         public Response InsertSubFamillys(List<SubFamilly> L_SubFamilly)
         {
             Response Response = new Response();
@@ -35,6 +43,10 @@ namespace Mercure.Controller
             return Response;
         }
 
+        /// <summary>
+        /// Delete all the subfamily items from the database
+        /// </summary>
+        /// <returns></returns>
         public Response DeleteAllSubFamilly()
         {
             Response Response = new Response();

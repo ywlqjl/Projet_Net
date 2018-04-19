@@ -10,9 +10,16 @@ using System.Xml;
 
 namespace Mercure
 {
+    /// <summary>
+    /// Load file and get the informations.
+    /// </summary>
     class ReadFile
     {
         static XmlDocument xf;
+        /// <summary>
+        /// Load the file
+        /// </summary>
+        /// <param name="filename"></param>
         public static void LoadFile(string filename) {
 
             xf= new XmlDocument();
@@ -20,7 +27,10 @@ namespace Mercure
 
         }
 
-
+        /// <summary>
+        /// Get the article list from the file
+        /// </summary>
+        /// <returns></returns>
         static public List<OriArticle> GetInfoArticleList()
         {
             

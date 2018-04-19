@@ -6,17 +6,27 @@ using System.Threading.Tasks;
 using Mercure.Model;
 namespace Mercure.Controller
 {
+    /// <summary>
+    /// Parse Articles
+    /// </summary>
     class ParseArticles
     {
+        //Attributs
         private List<OriArticle> List_Ori_Ari;
         private List<Mark> L_Mark = new List<Mark>();
         private List<Familly> L_Familly = new List<Familly>();
         private List<SubFamilly> L_SubFamilly = new List<SubFamilly>();
         private List<Article> L_Article = new List<Article>();
 
+
         public ParseArticles(List<OriArticle> List_Ori_Ari) {
             this.List_Ori_Ari = List_Ori_Ari;
         }
+
+        /// <summary>
+        /// Parse the article to be readable
+        /// </summary>
+        /// <returns></returns>
         public List<Article> ParseArticle() {
             // data structures
            
@@ -87,6 +97,7 @@ namespace Mercure.Controller
             return L_Article;
         }
 
+        
         internal List<Mark> L_Mark1
         {
             get

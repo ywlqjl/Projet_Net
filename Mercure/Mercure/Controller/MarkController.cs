@@ -7,6 +7,9 @@ using Mercure.Dao;
 using Mercure.Model;
 namespace Mercure.Controller
 {
+    /// <summary>
+    /// Mark controller to to find, add, delete, update from the mark database
+    /// </summary>
     class MarkController:CommonDelegate
     {
         MarkDAO MarkDAO = new MarkDAO();
