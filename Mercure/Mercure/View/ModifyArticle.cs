@@ -114,7 +114,7 @@ namespace Mercure.View
 
             Reference = textBox_RefArticle.Text;
             Description = textBox_Description.Text;
-            Price = textBox_PriceHT.Text.Replace(",", ".");
+            Price = textBox_PriceHT.Text;
             Quantity = textBox_Quantity.Text;
 
             Sub_Familly_Index = comboBox_SubFamily.SelectedIndex;

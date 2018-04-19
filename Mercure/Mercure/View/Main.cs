@@ -79,9 +79,18 @@ namespace Mercure
         /// </summary>
         private void listView_ShowBD_DataBinding()
         {
-            ListArticle = ArticleController.GetAllArticle();
-            listView_ShowBD.Items.Clear();
-            this.BindDataToView(this.MakeListItem());
+            try
+            {
+                ListArticle = ArticleController.GetAllArticle();
+                listView_ShowBD.Items.Clear();
+                this.BindDataToView(this.MakeListItem());
+            }
+            catch (Exception E)
+            {
+
+                MessageBox.Show("No database file found! Please put database file in right place.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                System.Environment.Exit(0);
+            }
 
         }
 

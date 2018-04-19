@@ -30,7 +30,7 @@ namespace Mercure.Controller
                 Article Art = new Article();
                 Art.RefArticle1 = OriArc.RefArticle1;
                 Art.Description1 = OriArc.Description1;
-                Art.PriceHT1 = float.Parse(OriArc.PrixHT1.Replace(',','.'));
+                Art.PriceHT1 = float.Parse(OriArc.PrixHT1);
                 Art.Quantity1 = 1;
                 //try catch here
 

@@ -50,7 +50,7 @@ namespace Mercure.View
             
             String Reference = Text_Box_Reference.Text;
             String Description = Text_Box_Description.Text;
-            String Price = Text_Box_Price.Text.Replace(",",".");
+            String Price = Text_Box_Price.Text;
             String Quantity = Text_Box_Quantity.Text;
 
             int Sub_Familly_Index = Combo_Box_Sous_Famille.SelectedIndex;
