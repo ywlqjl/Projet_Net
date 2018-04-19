@@ -25,7 +25,9 @@ namespace Mercure.View
             InitializeComponent();
             InitializeForm();
         }
-
+        /// <summary>
+        /// initialisation
+        /// </summary>
         private void InitializeForm()
         {
             FamillyController Familly_Controller = new FamillyController();
@@ -38,11 +40,20 @@ namespace Mercure.View
            
         }
 
+        /// <summary>
+        /// close the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// get the infomations of the selected item
+        /// </summary>
+        /// <param name="SelectedSubFamily"></param>
         public void GetSubFamilyToModify(ListViewItem SelectedSubFamily)
         {
             SubFamillyController SubFamController = new SubFamillyController();
@@ -58,7 +69,11 @@ namespace Mercure.View
         }
 
         
-
+        /// <summary>
+        /// get the changes from the textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox_NameSF_TextChanged(object sender, EventArgs e)
         {
             NameSubFamily = textBox_NameSF.Text;
@@ -70,6 +85,11 @@ namespace Mercure.View
             Console.WriteLine("refFamily-changed:" + RefFamily);
         }
 
+        /// <summary>
+        /// button: sava all the changes and close the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_SF_Submit_Click(object sender, EventArgs e)
         {
             RefSubFamily = textBox_RefSF.Text;

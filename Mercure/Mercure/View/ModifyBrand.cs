@@ -23,11 +23,20 @@ namespace Mercure.View
             InitializeComponent();
         }
 
+        /// <summary>
+        /// button: close the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        /// <summary>
+        /// button : save all the changes and close the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_MB_Submit_Click(object sender, EventArgs e)
         {
             RefBrand = textBox1.Text;
@@ -45,11 +54,20 @@ namespace Mercure.View
             this.Dispose();
         }
 
+        /// <summary>
+        /// get the changes from textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             NameBrand = textBox2.Text;
         }
 
+        /// <summary>
+        /// get all the informations of the selected item
+        /// </summary>
+        /// <param name="SelectedBrand"></param>
         public void GetBrandToModify(ListViewItem SelectedBrand)
         {
             MarkController BrandController = new MarkController();

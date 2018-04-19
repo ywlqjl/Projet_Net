@@ -14,6 +14,7 @@ namespace Mercure.View
 {
     public partial class AddMarque : Form
     {
+       
         public AddMarque()
         {
             InitializeComponent();
@@ -21,11 +22,21 @@ namespace Mercure.View
             Text_Box_Reference.Text = (Mark_Controller.GetMaxMarkId() + 1).ToString();
         }
 
+        /// <summary>
+        /// cancel to add a brand
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Cancel_Marque_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// commit the add information of brand
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Add_Marque_Click(object sender, EventArgs e)
         {
            

@@ -20,6 +20,9 @@ namespace Mercure.View
             InitializeForm();
         }
 
+        /// <summary>
+        /// initialisation of the add form
+        /// </summary>
         private void InitializeForm()
         {
             SubFamillyController Sub_Familly_Controller = new SubFamillyController();
@@ -40,11 +43,22 @@ namespace Mercure.View
         }
 
 
+        /// <summary>
+        /// cancel to add an article
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Cancel_Article_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+
+        /// <summary>
+        /// Add article listner
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Add_Article_Click(object sender, EventArgs e)
         {
             

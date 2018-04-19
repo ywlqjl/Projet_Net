@@ -20,7 +20,9 @@ namespace Mercure.View
             InitializeForm();
 
         }
-
+        /// <summary>
+        /// initialisation of the add subfamily form
+        /// </summary>
         private void InitializeForm()
         {
             FamillyController Familly_Controller = new FamillyController();
@@ -38,12 +40,20 @@ namespace Mercure.View
         {
 
         }
-
+        /// <summary>
+        /// cancel add subfamily
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Cancel_Sous_Famille_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        /// <summary>
+        /// add subfamily 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Add_Sous_Famille_Click(object sender, EventArgs e)
         {
             

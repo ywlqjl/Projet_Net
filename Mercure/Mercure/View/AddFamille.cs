@@ -21,11 +21,21 @@ namespace Mercure.View
             Text_Box_Reference.Text = (Familly_Controller.GetMaxFamillyId() + 1).ToString();
         }
 
+        /// <summary>
+        /// cancel to add a family
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Cancel_Famille_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// add family button listner
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Add_Famille_Click(object sender, EventArgs e)
         {
             FamillyController Familly_Controller = new FamillyController();

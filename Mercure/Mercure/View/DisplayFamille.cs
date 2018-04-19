@@ -13,9 +13,12 @@ using Mercure.Model;
 namespace Mercure.View
 {
     public partial class DisplayFamille : Form
-    {
+    {   //attribut
         public static ListViewItem SelectedFamily;
 
+        /// <summary>
+        /// initialisations of the family listview
+        /// </summary>
         public DisplayFamille()
         {
             InitializeComponent();
@@ -24,6 +27,9 @@ namespace Mercure.View
 
         }
 
+        /// <summary>
+        /// load all the families to the family listiew
+        /// </summary>
         private void LoadFamillies()
         {
             this.familleListView.Items.Clear();
@@ -42,11 +48,17 @@ namespace Mercure.View
 
         }
 
+
         private void familleListView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// Mouse double click for opening the family-modify window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void familleListView_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             ListViewHitTestInfo info = familleListView.HitTest(e.X, e.Y);
@@ -68,6 +80,11 @@ namespace Mercure.View
             }
         }
 
+        /// <summary>
+        /// Get the quick presskey F5 to Update the listview
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void familleListView_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F5)
@@ -76,6 +93,11 @@ namespace Mercure.View
             }
         }
 
+        /// <summary>
+        /// Menu click to open the add window and update it on time
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddArticle Add_Article = new AddArticle();
@@ -87,6 +109,11 @@ namespace Mercure.View
             }
         }
 
+        /// <summary>
+        /// mouse right click to open the menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnRightClick(object sender, MouseEventArgs e)
         {
             ListViewHitTestInfo info = this.familleListView.HitTest(e.X, e.Y);
@@ -97,6 +124,11 @@ namespace Mercure.View
             }
         }
 
+        /// <summary>
+        /// delete a family and update it on time
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FamillyController Familly_Controller = new FamillyController();

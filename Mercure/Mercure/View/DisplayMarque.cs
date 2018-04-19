@@ -23,6 +23,9 @@ namespace Mercure.View
             LoadBrands();
         }
 
+        /// <summary>
+        /// load all the brands
+        /// </summary>
         private void LoadBrands()
         {
             this.List_View_Marque.Items.Clear();
@@ -40,7 +43,11 @@ namespace Mercure.View
             }
 
         }
-
+        /// <summary>
+        /// double click to open the modify window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void List_View_Marque_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             ListViewHitTestInfo info = List_View_Marque.HitTest(e.X, e.Y);
@@ -60,6 +67,11 @@ namespace Mercure.View
             }
         }
 
+        /// <summary>
+        ///  Get the quick presskey F5 to Update the listview
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void List_View_Marque_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F5)
@@ -72,7 +84,11 @@ namespace Mercure.View
         {
 
         }
-
+        /// <summary>
+        /// item in a menu: delete a brand
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MarkController Mark_Controller = new MarkController();
@@ -91,6 +107,11 @@ namespace Mercure.View
             }
         }
 
+        /// <summary>
+        /// item in a menu: add a brand
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddMarque Add_Marque = new AddMarque();
@@ -102,6 +123,11 @@ namespace Mercure.View
             }
         }
 
+        /// <summary>
+        /// mouse right click to open the menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnRightClick(object sender, MouseEventArgs e)
         {
             ListViewHitTestInfo info = this.List_View_Marque.HitTest(e.X, e.Y);

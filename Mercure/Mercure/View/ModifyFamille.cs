@@ -23,6 +23,11 @@ namespace Mercure.View
             InitializeComponent();
         }
 
+        /// <summary>
+        /// button： close the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_MF_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();

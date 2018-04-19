@@ -15,7 +15,9 @@ namespace Mercure.View
     public partial class DisplaySousFamille : Form
     {
         public static ListViewItem SelectedSubFamily;
-
+        /// <summary>
+        /// show all the informations of the subfamily list
+        /// </summary>
         public DisplaySousFamille()
         {
             InitializeComponent();
@@ -23,6 +25,9 @@ namespace Mercure.View
             LoadSubFamillies();
         }
 
+        /// <summary>
+        /// load all the subfamilies
+        /// </summary>
         private void LoadSubFamillies()
         {
             this.List_View_Sous_Famille.Items.Clear();
@@ -51,7 +56,11 @@ namespace Mercure.View
         {
 
         }
-
+        /// <summary>
+        ///  mouse double click on the list to open the modify window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void List_View_Sous_Famille_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             ListViewHitTestInfo info = List_View_Sous_Famille.HitTest(e.X, e.Y);
@@ -70,7 +79,11 @@ namespace Mercure.View
 
             }
         }
-
+        /// <summary>
+        /// Get the quick presskey F5 to Update the listview
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void List_View_Sous_Famille_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F5)
@@ -79,6 +92,11 @@ namespace Mercure.View
             }
         }
 
+        /// <summary>
+        /// item in a menu: delete a subfamily
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SubFamillyController Sub_Familly_Controller = new SubFamillyController();
@@ -97,6 +115,11 @@ namespace Mercure.View
             }
         }
 
+        /// <summary>
+        /// item in a menu: add a subfamily
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddSousFamille Add_Sous_Famille = new AddSousFamille();
@@ -108,6 +131,11 @@ namespace Mercure.View
             }
         }
 
+        /// <summary>
+        /// mouse right click to open the menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnRightClick(object sender, MouseEventArgs e)
         {
             ListViewHitTestInfo info = this.List_View_Sous_Famille.HitTest(e.X, e.Y);
